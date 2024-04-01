@@ -34,6 +34,9 @@
     fd 
     ripgrep
     zoxide
+    imagemagick
+    gimp
+
   ];
 
   home.file = {
