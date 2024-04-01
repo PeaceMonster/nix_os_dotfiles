@@ -39,6 +39,11 @@
     bat
   ];
 
+  home.shellAliases = {
+    lg = "lazygit";
+  };
+
+
   programs.yazi = {
       enable = true;
       enableFishIntegration = true;
@@ -57,5 +62,6 @@
   imports = [
     ./fish.nix
   ];
+
 
 }
