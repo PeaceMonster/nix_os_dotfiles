@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     # Terminals
     fish
+    zsh
 
 
     # Programs
@@ -61,6 +62,7 @@
 
   imports = [
     ./fish.nix
+    ./zsh.nix
   ];
 
 
