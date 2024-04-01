@@ -10,6 +10,8 @@
     # Programs
     libqalculate
     lazygit
+    vim
+    git
 
     # File manipulation
     ffmpeg
