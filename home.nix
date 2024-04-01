@@ -37,6 +37,9 @@
     imagemagick
     gimp
 
+    python3
+    rofi
+    
   ];
 
   home.file = {
