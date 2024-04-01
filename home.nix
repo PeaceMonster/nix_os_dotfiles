@@ -27,6 +27,8 @@
     nerdfonts
     gimp
     rofi
+    thunderbird
+    mpv
   ];
 
   home.file = {
