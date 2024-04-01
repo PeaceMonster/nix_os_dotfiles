@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.pakages = with pkgs; [
+  home.packages = with pkgs; [
     python3
   ];
 }

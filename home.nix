@@ -44,7 +44,6 @@
 
   imports = [
     ./user/neovim/neovim.nix
-    ./user/git.nix
     ./user/terminal.nix
     ./user/languages.nix
   ];

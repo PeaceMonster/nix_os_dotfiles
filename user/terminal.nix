@@ -53,6 +53,6 @@
 
   imports = [
     ./fish.nix
-  ]
+  ];
 
 }
