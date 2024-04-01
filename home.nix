@@ -20,37 +20,17 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    fish 
     rust-analyzer
     wget
     git
     qutebrowser
-    lazygit
     nerdfonts
-    xclip
-    yazi
-    ffmpeg 
-    jq 
-    fd 
-    ripgrep
-    zoxide
-    imagemagick
     gimp
-
-    python3
     rofi
-    
   ];
 
   home.file = {
   };
-
-  programs.zoxide = {
-      enable = true;
-
-      enableFishIntegration = true;
-    };
-
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -61,9 +41,9 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./user/fish.nix
     ./user/neovim/neovim.nix
-    ./user/yazi.nix
     ./user/git.nix
+    ./user/terminal.nix
+    ./user/languages.nix
   ];
 }
