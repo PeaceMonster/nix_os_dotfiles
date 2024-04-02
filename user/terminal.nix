@@ -42,6 +42,7 @@
 
   home.shellAliases = {
     lg = "lazygit";
+    nv = "nvim .";
   };
 
 
