@@ -33,11 +33,11 @@
     jq # Json cli tool
     file # Info about file
     asciidoctor
-    xclip
     fd # Better find
     yazi # Terminal File manager
     zoxide # z jump go brrr
     bat
+    fzf
   ];
 
   home.shellAliases = {
