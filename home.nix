@@ -27,6 +27,7 @@
     nerdfonts
     gimp
     rofi
+    wofi
     thunderbird
     mpv
   ];
