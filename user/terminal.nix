@@ -13,6 +13,7 @@
     lazygit
     vim
     git
+    rofi
 
     # File manipulation
     ffmpeg
