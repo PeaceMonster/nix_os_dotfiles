@@ -18,6 +18,14 @@
     extraLuaConfig =
       let
         plugins = with pkgs.vimPlugins; [
+
+          # My Own
+          neoscroll-nvim
+          ccc-nvim
+          rustaceanvim
+          dracula-nvim
+
+
           # LazyVim
           LazyVim
           bufferline-nvim
@@ -125,4 +133,8 @@
 
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
   xdg.configFile."nvim/lua".source = ./lua;
+  xdg.configFile."nvim/ftdetect".source = ./ftdetect;
+  xdg.configFile."nvim/spell".source = ./spell;
+  xdg.configFile."nvim/syntax".source = ./syntax;
+
 }

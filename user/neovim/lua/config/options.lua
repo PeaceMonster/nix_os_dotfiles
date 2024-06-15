@@ -3,4 +3,6 @@
 -- Add any additional options here
 --
 
+vim.opt.termguicolors = true
+
 vim.opt.clipboard = ""
