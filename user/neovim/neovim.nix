@@ -76,8 +76,6 @@
           { name = "mini.pairs"; path = mini-nvim; }
           { name = "mini.surround"; path = mini-nvim; }
 
-          # LSP Ting Ting
-          #nvim-treesitter-parsers.nix
           
 
 
@@ -126,6 +124,7 @@
         paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
           c
           lua
+          nix
         ])).dependencies;
       };
     in

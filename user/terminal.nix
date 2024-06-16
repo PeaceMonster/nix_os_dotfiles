@@ -7,6 +7,8 @@
     fish
     zsh
 
+    starship
+
 
     # Programs
     libqalculate
@@ -61,6 +63,14 @@
       userName = "Mikkel Ugilt";
       userEmail = "ugilt3@gmail.com";
   };
+
+  programs.starship = {
+      enable = true;
+      enableFishIntegration = true;
+      presets = [
+        "gruvbox"
+      ];
+    };
 
   imports = [
     ./fish.nix
