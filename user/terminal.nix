@@ -67,9 +67,7 @@
   programs.starship = {
       enable = true;
       enableFishIntegration = true;
-      presets = [
-        "gruvbox"
-      ];
+      settings = pkgs.lib.importTOML ./starship.toml;
     };
 
   imports = [
