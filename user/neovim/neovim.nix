@@ -125,6 +125,7 @@
           c
           lua
           nix
+          typst
         ])).dependencies;
       };
     in
