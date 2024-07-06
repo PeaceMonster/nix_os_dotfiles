@@ -9,6 +9,7 @@
       stylua
       # Telescope
       ripgrep
+    rust-analyzer
     ];
 
     plugins = with pkgs.vimPlugins; [
