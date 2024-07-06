@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./desktops/plasma.nix
+      ./desktops/qtile.nix
       #./desktops/sway.nix
     ];
 
