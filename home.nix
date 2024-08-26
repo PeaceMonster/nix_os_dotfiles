@@ -29,6 +29,8 @@
     wofi
     thunderbird
     mpv
+    neovim
+    kitty
   ];
 
   home.file = {

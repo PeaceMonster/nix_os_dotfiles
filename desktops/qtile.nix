@@ -1,6 +1,7 @@
 {config, lib, pkgs, ...}:
 
 {
+  services.xserver.windowManager.qtile.enable = true;
   nixpkgs.overlays = [
   (self: super: {
     qtile-unwrapped = super.qtile-unwrapped.overrideAttrs(_: rec {
