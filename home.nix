@@ -31,6 +31,9 @@
     spicetify-cli
     zathura
     spotify
+    comma
+    bottles
+    bitwarden-desktop
   ];
 
 

@@ -9,9 +9,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-index-database, ... }:
     let 
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -20,7 +22,10 @@
     nixosConfigurations = {
       ugilt = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ 
+  	  ./configuration.nix 
+	  nix-index-database.nixosModules.nix-index
+	];
       };
     };
     homeConfigurations = {
