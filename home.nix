@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "ugilt";
@@ -26,21 +24,24 @@
     nerdfonts
     gimp
     rofi
-    wofi
     thunderbird
     mpv
     neovim
     kitty
     spicetify-cli
     zathura
+    spotify
   ];
 
-  home.file = {
-  };
+
+  nixpkgs.config.allowUnfree = true;
+
+  # home.file = { };
 
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
+    XKB_DEFAULT_OPTIONS = "caps:escape";
   };
 
   # Let Home Manager install and manage itself.
