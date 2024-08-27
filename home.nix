@@ -31,6 +31,8 @@
     mpv
     neovim
     kitty
+    spicetify-cli
+    zathura
   ];
 
   home.file = {
