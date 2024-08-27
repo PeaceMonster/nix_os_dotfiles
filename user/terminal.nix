@@ -69,11 +69,18 @@
       enable = true;
       enableFishIntegration = true;
       settings = pkgs.lib.importTOML ./starship.toml;
-    };
+  };
+
+  programs.zsh = {
+      enable = true;
+  };
+
+  programs.bash = {
+    enable = true;
+  };
 
   imports = [
     ./fish.nix
-    ./zsh.nix
   ];
 
 
