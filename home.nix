@@ -33,7 +33,6 @@
     spotify
     comma
     bitwarden-desktop
-    wine64
   ];
 
 
