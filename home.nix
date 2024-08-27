@@ -32,8 +32,8 @@
     zathura
     spotify
     comma
-    bottles
     bitwarden-desktop
+    wine64
   ];
 
 
