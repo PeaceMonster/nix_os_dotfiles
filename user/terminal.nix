@@ -16,6 +16,7 @@
     vim
     git
     rofi
+    tldr
 
     # File manipulation
     ffmpeg
