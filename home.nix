@@ -18,7 +18,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    wget
     git
     qutebrowser
     nerdfonts
@@ -33,10 +32,7 @@
     spotify
     comma
     bitwarden-desktop
-
-    wine64
-    winetricks
-    wineWowPackages.waylandFull
+    bottles
   ];
 
 

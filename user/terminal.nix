@@ -41,6 +41,7 @@
     zoxide # z jump go brrr
     bat
     fzf
+    wget
   ];
 
   home.shellAliases = {
@@ -69,6 +70,7 @@
       enable = true;
       enableFishIntegration = true;
       settings = pkgs.lib.importTOML ./starship.toml;
+      enableTransience = true;
   };
 
   programs.zsh = {
