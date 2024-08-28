@@ -50,7 +50,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./user/neovim/neovim.nix
+    # ./user/neovim/neovim.nix
     ./user/terminal.nix
     ./user/languages.nix
   ];

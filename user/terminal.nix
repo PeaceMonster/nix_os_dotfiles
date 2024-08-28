@@ -43,6 +43,8 @@
     bat
     fzf
     wget
+    xclip
+    wl-clipboard
   ];
 
   home.shellAliases = {

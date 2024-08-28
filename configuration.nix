@@ -126,6 +126,20 @@
   '';
   };
 
+  security.sudo = {
+    enable = true;
+    extraRules = [{
+      commands = [
+	{
+	  command = "/usr/bin/env";
+	  options = [ "NOPASSWD" ];
+	}
+      ];
+      groups = [ "wheel" ];
+    }];
+  };
+
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
