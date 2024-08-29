@@ -31,8 +31,8 @@
       ugilt = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ 
-      	./home.nix 
 	inputs.nixvim.homeManagerModules.nixvim
+      	./home.nix 
 	];
       };
     };
