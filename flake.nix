@@ -20,6 +20,7 @@
     nixosConfigurations = {
       ugilt = lib.nixosSystem {
         inherit system;
+	specialArgs = { inherit inputs; };
         modules = [ 
   	  ./configuration.nix 
 	  nix-index-database.nixosModules.nix-index
