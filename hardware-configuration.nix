@@ -16,6 +16,7 @@ in
   boot.kernelModules = [ "kvm-intel" "asus-wmi-screenpad" ];
   boot.extraModulePackages = [ asus-wmi-screenpad ];
 
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/badf45db-8a04-4990-a2d4-ae4413f11db9";
       fsType = "ext4";

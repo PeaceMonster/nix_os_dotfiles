@@ -22,6 +22,16 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "ugilt"; # Define your hostname.
+
+  systemd.services.screenpadBrightness = {
+    description = "Enables sudo-less brightness changes of screenpad";
+    script = ''
+      chmod a+w '/sys/class/leds/asus::screenpad/brightness'
+      echo 255 > '/sys/class/leds/asus::screenpad/brightness'
+    '';
+    wantedBy = [ "multi-user.target" ];
+  };
+    
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
