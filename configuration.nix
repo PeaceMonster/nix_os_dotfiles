@@ -124,6 +124,7 @@
     git
     kanshi
     wdisplays
+    pamixer
   ];
 
   programs.bash = {
