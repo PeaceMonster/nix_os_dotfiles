@@ -9,6 +9,7 @@
     # LSP
     nixd
     rust-analyzer
+    metals
 
     # Formatters
     rustfmt

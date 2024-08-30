@@ -40,20 +40,12 @@
       zen-mode.enable = true;
       vim-css-color.enable = true;
     };
-
-    plugins.lsp.servers = {
-      nixd.enable = true;
-      rust-analyzer = {
-        enable = true;
-        installCargo = false;
-        installRustc = false;
-      };
-    };
   };
 
   imports = [
     ./cmp.nix
     ./keymaps.nix
     ./conform.nix
+    ./lsp-config.nix
   ];
 }
