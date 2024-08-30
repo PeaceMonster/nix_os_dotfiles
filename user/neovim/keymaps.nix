@@ -110,6 +110,27 @@
         options.desc = "Change window up";
       }
       {
+        key = "<C-Up>";
+        action = "<C-w>+";
+        options.desc = "Increase window height";
+      }
+      {
+        key = "<C-Down>";
+        action = "<C-w>-";
+        options.desc = "Decrease window height";
+      }
+      {
+        key = "<C-Right>";
+        action = "<C-w>>";
+        options.desc = "Increase window width";
+      }
+      {
+        key = "<C-Left>";
+        action = "<C-w><";
+        options.desc = "Decrease window width";
+      }
+
+      {
         key = "<space>wd";
         action = "<C-w>q";
         options.desc = "Kill window";

@@ -36,6 +36,7 @@
     skim # Fuzzy finder
     yt-dlp # Video downloader
     jq # Json cli tool
+    justbuild
     file # Info about file
     asciidoctor
     fd # Better find
