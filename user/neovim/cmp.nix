@@ -1,20 +1,16 @@
-{ ... }:
-
-{
- programs.nixvim = {
-
+{...}: {
+  programs.nixvim = {
     plugins.cmp = {
       settings = {
         snippet = {
-	  expand = ''
-	    function(args)
-	      require('luasnip').lsp_expand(args.body)
-	    end
-	  '';
-	};
+          expand = ''
+            function(args)
+              require('luasnip').lsp_expand(args.body)
+            end
+          '';
+        };
 
-
-	mapping = {
+        mapping = {
           # Select the [n]ext item
           "<C-n>" = "cmp.mapping.select_next_item()";
           # Select the [p]revious item
@@ -29,7 +25,7 @@
           # If you prefer more traditional completion keymaps,
           # you can uncomment the following lines.
           "<CR>" = "cmp.mapping.confirm { select = true }";
-	  "<C-e>" = "cmp.abort";
+          "<C-e>" = "cmp.abort";
           # "<Tab>" = "cmp.mapping.select_next_item()";
           # "<S-Tab>" = "cmp.mapping.select_prev_item()";
 
@@ -37,9 +33,9 @@
           #  Generally you don't need this, because nvim-cmp will display
           #  completions whenever it has completion options available.
           "<C-Space>" = "cmp.mapping.complete {}";
-	};
+        };
 
-	sources = [
+        sources = [
           {
             name = "luasnip";
           }
@@ -54,13 +50,11 @@
           }
         ];
       };
-
     };
 
     extraLuaPackages = ps: [
       # Required by luasnip
       ps.jsregexp
     ];
- };
-
+  };
 }

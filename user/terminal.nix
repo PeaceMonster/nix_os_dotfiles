@@ -1,14 +1,15 @@
-{ config, pkgs, lib, ... }:
-
 {
-
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [
     # Terminals
     fish
     zsh
 
     starship
-
 
     # Programs
     libqalculate
@@ -53,31 +54,30 @@
     ya = "yy";
   };
 
-
   programs.yazi = {
-      enable = true;
-      enableFishIntegration = true;
+    enable = true;
+    enableFishIntegration = true;
   };
 
   programs.zoxide = {
-      enable = true;
-      enableFishIntegration = true;
+    enable = true;
+    enableFishIntegration = true;
   };
   programs.git = {
-      enable = true;
-      userName = "Mikkel Ugilt";
-      userEmail = "ugilt3@gmail.com";
+    enable = true;
+    userName = "Mikkel Ugilt";
+    userEmail = "ugilt3@gmail.com";
   };
 
   programs.starship = {
-      enable = true;
-      enableFishIntegration = true;
-      settings = pkgs.lib.importTOML ./starship.toml;
-      enableTransience = true;
+    enable = true;
+    enableFishIntegration = true;
+    settings = pkgs.lib.importTOML ./starship.toml;
+    enableTransience = true;
   };
 
   programs.zsh = {
-      enable = true;
+    enable = true;
   };
 
   programs.bash = {
@@ -87,6 +87,4 @@
   imports = [
     ./fish.nix
   ];
-
-
 }

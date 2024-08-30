@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = {
     # Enable the KDE Plasma Desktop Environment.
     services.desktopManager.plasma6.enable = true;
@@ -10,7 +13,6 @@
       enable = true;
       xkb.layout = "dk";
       xkb.variant = "nodeadkeys";
-
 
       displayManager = {
         sddm.enable = true;

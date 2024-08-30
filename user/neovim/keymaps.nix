@@ -1,10 +1,31 @@
-{...}:
-
-{
+{...}: {
   programs.nixvim = {
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed = "<space>b";
+        group = "Buffers";
+      }
+      {
+        __unkeyed = "<space>t";
+        group = "Telescope";
+      }
+      {
+        __unkeyed = "<space>u";
+        group = "Ui";
+      }
+      {
+        __unkeyed = "<space>w";
+        group = "Windows";
+      }
+      {
+        __unkeyed = "<space>c";
+        group = "Code";
+      }
+    ];
+
     keymaps = [
       {
-      	key = "<C-s>";
+        key = "<C-s>";
         action = ":w<cr>";
         options.desc = "Save";
         options.silent = true;
@@ -20,7 +41,12 @@
         action = "<cmd>qa<cr>";
         options.desc = "Quit Nvim";
       }
-
+      {
+        key = "<escape>";
+        action = "<cmd>noh<cr>";
+        mode = "n";
+        options.noremap = true;
+      }
 
       # Buffers
       {
@@ -30,9 +56,9 @@
         options.silent = true;
       }
       {
-      	key = "<space>bd";
-	action = "<cmd>BufferDelete<cr>";
-	options.desc = "Delete current buffer";
+        key = "<space>bd";
+        action = "<cmd>BufferDelete<cr>";
+        options.desc = "Delete current buffer";
       }
       {
         key = "H";
@@ -54,9 +80,9 @@
         options.desc = "Create a vertical split";
       }
       {
-      	key = "<space>_";
-	action = "<cmd>split<cr>";
-	options.desc = "Create a horizontal split";
+        key = "<space>_";
+        action = "<cmd>split<cr>";
+        options.desc = "Create a horizontal split";
       }
       {
         key = "<C-l>";
@@ -79,23 +105,73 @@
         options.desc = "Change window up";
       }
       {
-	key = "<space>wd";
-	action = "<C-w>q";
-	options.desc = "Kill window";
-      }
-      
-      # Telescope
-      {
-        key = "<space>";
-        action = "";
-        options.desc = "";
+        key = "<space>wd";
+        action = "<C-w>q";
+        options.desc = "Kill window";
       }
 
-      # Trouble 
+      # Telescope
       {
-      	key = "<space>cs";
-	action = "<cmd>Trouble symbols toggle focus=false<cr>";
-	options.desc = "Show Symbols";
+        key = "<space><space>";
+        action = "<cmd>Telescope find_files<cr>";
+        options.desc = "Telescope Find Files";
+      }
+      {
+        key = "<space>tf";
+        action = "<cmd>Telescope find_files<cr>";
+        options.desc = "Telescope Find Files";
+      }
+      {
+        key = "<space>tb";
+        action = "<cmd>Telescope buffers<cr>";
+        options.desc = "Telescope buffers";
+      }
+      {
+        key = "<space>tg";
+        action = "<cmd>Telescope live_grep<cr>";
+        options.desc = "Telescope live grep";
+      }
+      {
+        key = "<space>\\";
+        action = "<cmd>Telescope live_grep<cr>";
+        options.desc = "Telescope live grep";
+      }
+      {
+        key = "<space>tq";
+        action = "<cmd>Telescope quickfix<cr>";
+        options.desc = "Telescope quickfix";
+      }
+      {
+        key = "<space>uc";
+        action = "<cmd>Telescope colorscheme preview=true<cr>";
+        options.desc = "Pick colorscheme";
+      }
+
+      # Trouble
+      {
+        key = "<space>cs";
+        action = "<cmd>Trouble symbols toggle focus=false<cr>";
+        options.desc = "Show Symbols";
+      }
+
+      # Float Term
+      {
+        key = "<space>ut";
+        action = "<cmd>FloatermToggle<cr>";
+        options.desc = "Toggle floatterm";
+      }
+      {
+        key = "<C-n>";
+        action = "<C-\\><C-n>";
+        options.desc = "Escape terminal mode";
+        mode = ["t"];
+      }
+
+      # Lazygit
+      {
+        key = "<space>gg";
+        action = "<cmd>LazyGit<cr>";
+        options.desc = "Open LazyGit";
       }
     ];
   };

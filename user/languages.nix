@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     python3
     typst
@@ -11,5 +9,9 @@
     # LSP
     nixd
     rust-analyzer
+
+    # Formatters
+    rustfmt
+    alejandra #nixfmt
   ];
 }

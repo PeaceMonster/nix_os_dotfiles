@@ -11,29 +11,34 @@
     asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-index-database, ... }@inputs:
-    let 
-      system = "x86_64-linux";
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-index-database,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    lib = nixpkgs.lib;
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
     nixosConfigurations = {
       ugilt = lib.nixosSystem {
         inherit system;
-	specialArgs = { inherit inputs; };
-        modules = [ 
-  	  ./configuration.nix 
-	  nix-index-database.nixosModules.nix-index
-	];
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./configuration.nix
+          nix-index-database.nixosModules.nix-index
+        ];
       };
     };
     homeConfigurations = {
       ugilt = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [ 
-	inputs.nixvim.homeManagerModules.nixvim
-      	./home.nix 
-	];
+        inherit pkgs;
+        modules = [
+          inputs.nixvim.homeManagerModules.nixvim
+          ./home.nix
+        ];
       };
     };
   };
