@@ -1,4 +1,8 @@
-{...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.nixvim = {
     enable = true;
     colorschemes.gruvbox.enable = true;
@@ -30,12 +34,6 @@
       guess-indent.enable = true;
       illuminate.enable = true;
       lazygit.enable = true;
-      conform-nvim = {
-        enable = true;
-        settings = {
-          format_on_save.lsp_format = "first";
-        };
-      };
     };
 
     plugins.lsp.servers = {
@@ -51,5 +49,6 @@
   imports = [
     ./cmp.nix
     ./keymaps.nix
+    ./conform.nix
   ];
 }
