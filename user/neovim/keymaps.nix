@@ -26,13 +26,13 @@
     keymaps = [
       {
         key = "<C-s>";
-        action = ":w<cr>";
+        action = "<cmd>w<cr>";
         options.desc = "Save";
         options.silent = true;
       }
       {
         key = "<space>e";
-        action = ":Ex<cr>";
+        action = "<cmd>Oil<cr>";
         options.desc = "Open Netrw";
         options.silent = true;
       }
@@ -46,6 +46,11 @@
         action = "<cmd>noh<cr>";
         mode = "n";
         options.noremap = true;
+      }
+      {
+        key = "<space>uz";
+        action = "<cmd>ZenMode<cr>";
+        options.desc = "Toggle zenmode";
       }
 
       # Buffers
@@ -146,6 +151,11 @@
         action = "<cmd>Telescope colorscheme preview=true<cr>";
         options.desc = "Pick colorscheme";
       }
+      {
+        key = "<space>tc";
+        action = "<cmd>Telescope neoclip<cr>";
+        options.desc = "Telescope neoclip";
+      }
 
       # Trouble
       {
@@ -172,6 +182,20 @@
         key = "<space>gg";
         action = "<cmd>LazyGit<cr>";
         options.desc = "Open LazyGit";
+      }
+
+      # Fzflua
+      {
+        key = "<space>ca";
+        action = "<cmd>FzfLua lsp_code_actions<cr>";
+        options.desc = "Code actions";
+      }
+
+      # Lsp
+      {
+        key = "gd";
+        action = "<C-]>";
+        options.desc = "Go to definition";
       }
     ];
   };

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{...}: {
   programs.nixvim = {
     enable = true;
     colorschemes.gruvbox.enable = true;
@@ -34,6 +30,15 @@
       guess-indent.enable = true;
       illuminate.enable = true;
       lazygit.enable = true;
+      neoclip.enable = true;
+      neoscroll.enable = true;
+      fzf-lua.enable = true;
+      oil.enable = true;
+      todo-comments.enable = true;
+      treesitter-refactor.enable = true;
+      twilight.enable = true;
+      zen-mode.enable = true;
+      vim-css-color.enable = true;
     };
 
     plugins.lsp.servers = {
