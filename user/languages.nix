@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -6,8 +6,10 @@
     typst
     cargo
     libgccjit
+    rustc
 
     # LSP
     nixd
+    rust-analyzer
   ];
 }

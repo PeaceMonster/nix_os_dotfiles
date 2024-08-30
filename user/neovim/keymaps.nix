@@ -1,10 +1,7 @@
-{ config, lib, pkgs, ...}:
+{...}:
 
 {
   programs.nixvim = {
-    enable = true;
-    colorschemes.gruvbox.enable = true;
-
     keymaps = [
       {
       	key = "<C-s>";
@@ -18,6 +15,12 @@
         options.desc = "Open Netrw";
         options.silent = true;
       }
+      {
+        key = "<space>q";
+        action = "<cmd>qa<cr>";
+        options.desc = "Quit Nvim";
+      }
+
 
       # Buffers
       {
@@ -51,6 +54,11 @@
         options.desc = "Create a vertical split";
       }
       {
+      	key = "<space>_";
+	action = "<cmd>split<cr>";
+	options.desc = "Create a horizontal split";
+      }
+      {
         key = "<C-l>";
         action = "<C-w>l";
         options.desc = "Change window to the right";
@@ -70,8 +78,18 @@
         action = "<C-w>k";
         options.desc = "Change window up";
       }
+      {
+	key = "<space>wd";
+	action = "<C-w>q";
+	options.desc = "Kill window";
+      }
       
-
+      # Telescope
+      {
+        key = "<space>";
+        action = "";
+        options.desc = "";
+      }
 
       # Trouble 
       {
@@ -80,21 +98,5 @@
 	options.desc = "Show Symbols";
       }
     ];
-
-    plugins = {
-      noice.enable = true;
-      airline.enable = true;
-      barbar.enable = true;
-      which-key.enable = true;
-      treesitter.enable = true;
-      trouble.enable = true;
-      lsp.enable = true;
-    };
-
-    plugins.lsp.servers = {
-      nixd.enable = true;
-
-    };
   };
-
 }

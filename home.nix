@@ -54,6 +54,6 @@
     ./user/terminal.nix
     ./user/languages.nix
     ./user/defaults.nix
-    ./user/neovim.nix
+    ./user/neovim/neovim.nix
   ];
 }
