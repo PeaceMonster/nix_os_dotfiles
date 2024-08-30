@@ -6,5 +6,8 @@
     typst
     cargo
     libgccjit
+
+    # LSP
+    nixd
   ];
 }

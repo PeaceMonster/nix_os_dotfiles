@@ -25,7 +25,7 @@
     rofi
     thunderbird
     mpv
-    neovim
+    # neovim
     kitty
     spicetify-cli
     zathura
@@ -54,5 +54,6 @@
     ./user/terminal.nix
     ./user/languages.nix
     ./user/defaults.nix
+    ./user/neovim.nix
   ];
 }
