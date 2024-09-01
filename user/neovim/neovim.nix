@@ -1,7 +1,11 @@
-{...}: {
+{pkgs, ...}: {
   programs.nixvim = {
     enable = true;
     colorschemes.gruvbox.enable = true;
+
+    extraPlugins = with pkgs.vimPlugins; [
+      pest-vim
+    ];
 
     plugins = {
       noice.enable = true;

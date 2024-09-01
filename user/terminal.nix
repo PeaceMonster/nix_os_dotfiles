@@ -18,6 +18,7 @@
     git
     rofi
     tldr
+    bacon
 
     # File manipulation
     ffmpeg
@@ -36,7 +37,7 @@
     skim # Fuzzy finder
     yt-dlp # Video downloader
     jq # Json cli tool
-    justbuild
+    just
     file # Info about file
     asciidoctor
     fd # Better find
