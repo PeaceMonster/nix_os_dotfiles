@@ -21,7 +21,12 @@
         __unkeyed = "<space>c";
         group = "Code";
       }
+      {
+        __unkeyed = "<space>c";
+        group = "Git";
+      }
     ];
+    globals.mapleader = " ";
 
     keymaps = [
       {
@@ -31,13 +36,13 @@
         options.silent = true;
       }
       {
-        key = "<space>e";
+        key = "<leader>e";
         action = "<cmd>Oil<cr>";
         options.desc = "Open Netrw";
         options.silent = true;
       }
       {
-        key = "<space>q";
+        key = "<leader>q";
         action = "<cmd>qa<cr>";
         options.desc = "Quit Nvim";
       }
@@ -48,20 +53,20 @@
         options.noremap = true;
       }
       {
-        key = "<space>uz";
+        key = "<leader>uz";
         action = "<cmd>ZenMode<cr>";
         options.desc = "Toggle zenmode";
       }
 
       # Buffers
       {
-        key = "<space>bs";
+        key = "<leader>bs";
         action = ":BufferPick<cr>";
         options.desc = "Pick a buffer";
         options.silent = true;
       }
       {
-        key = "<space>bd";
+        key = "<leader>bd";
         action = "<cmd>BufferDelete<cr>";
         options.desc = "Delete current buffer";
       }
@@ -80,12 +85,12 @@
 
       #Windows
       {
-        key = "<space>|";
+        key = "<leader>|";
         action = "<cmd>vsplit<cr>";
         options.desc = "Create a vertical split";
       }
       {
-        key = "<space>_";
+        key = "<leader>_";
         action = "<cmd>split<cr>";
         options.desc = "Create a horizontal split";
       }
@@ -131,63 +136,63 @@
       }
 
       {
-        key = "<space>wd";
+        key = "<leader>wd";
         action = "<C-w>q";
         options.desc = "Kill window";
       }
 
       # Telescope
       {
-        key = "<space><space>";
+        key = "<leader><space>";
         action = "<cmd>Telescope find_files<cr>";
         options.desc = "Telescope Find Files";
       }
       {
-        key = "<space>tf";
+        key = "<leader>tf";
         action = "<cmd>Telescope find_files<cr>";
         options.desc = "Telescope Find Files";
       }
       {
-        key = "<space>tb";
+        key = "<leader>tb";
         action = "<cmd>Telescope buffers<cr>";
         options.desc = "Telescope buffers";
       }
       {
-        key = "<space>tg";
+        key = "<leader>tg";
         action = "<cmd>Telescope live_grep<cr>";
         options.desc = "Telescope live grep";
       }
       {
-        key = "<space>\\";
+        key = "<leader>\\";
         action = "<cmd>Telescope live_grep<cr>";
         options.desc = "Telescope live grep";
       }
       {
-        key = "<space>tq";
+        key = "<leader>tq";
         action = "<cmd>Telescope quickfix<cr>";
         options.desc = "Telescope quickfix";
       }
       {
-        key = "<space>uc";
+        key = "<leader>uc";
         action = "<cmd>Telescope colorscheme preview=true<cr>";
         options.desc = "Pick colorscheme";
       }
       {
-        key = "<space>tc";
+        key = "<leader>tc";
         action = "<cmd>Telescope neoclip<cr>";
         options.desc = "Telescope neoclip";
       }
 
       # Trouble
       {
-        key = "<space>cs";
+        key = "<leader>cs";
         action = "<cmd>Trouble symbols toggle focus=false<cr>";
         options.desc = "Show Symbols";
       }
 
       # Float Term
       {
-        key = "<space>ut";
+        key = "<leader>ut";
         action = "<cmd>FloatermToggle<cr>";
         options.desc = "Toggle floatterm";
       }
@@ -200,14 +205,14 @@
 
       # Lazygit
       {
-        key = "<space>gg";
+        key = "<leader>gg";
         action = "<cmd>LazyGit<cr>";
         options.desc = "Open LazyGit";
       }
 
       # Fzflua
       {
-        key = "<space>ca";
+        key = "<leader>ca";
         action = "<cmd>FzfLua lsp_code_actions<cr>";
         options.desc = "Code actions";
       }

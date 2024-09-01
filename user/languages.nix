@@ -3,8 +3,8 @@
     python3
     typst
     cargo
-    libgccjit
     rustc
+    gcc9
 
     # LSP
     nixd

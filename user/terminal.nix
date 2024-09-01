@@ -28,7 +28,6 @@
     tectonic
     unzip
     zip
-    binutils
     pdftk
 
     # Misc
