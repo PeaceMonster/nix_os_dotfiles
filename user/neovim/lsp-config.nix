@@ -7,5 +7,6 @@
       installRustc = false;
     };
     metals.enable = true;
+    typst-lsp.enable = true;
   };
 }

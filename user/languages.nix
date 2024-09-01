@@ -10,9 +10,11 @@
     nixd
     rust-analyzer
     metals
+    typst-lsp
 
     # Formatters
     rustfmt
     alejandra #nixfmt
+    typstyle
   ];
 }

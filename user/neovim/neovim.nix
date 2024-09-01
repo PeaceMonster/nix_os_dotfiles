@@ -40,6 +40,7 @@
       treesitter-refactor.enable = true;
       twilight.enable = true;
       telescope.enable = true;
+      typst-vim.enable = true;
       vim-css-color.enable = true;
       which-key.enable = true;
       zen-mode.enable = true;

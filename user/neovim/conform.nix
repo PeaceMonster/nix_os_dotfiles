@@ -9,11 +9,15 @@
       format_on_save.lsp_format = "first";
       formatters_by_ft = {
         nix = ["alejandra"];
+        typ = ["typstyle"];
       };
 
       formatters = {
         alejandra = {
           command = lib.getExe pkgs.alejandra;
+        };
+        typstyle = {
+          command = lib.getExe pkgs.typstyle;
         };
       };
     };
