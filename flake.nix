@@ -12,23 +12,12 @@
     nixvim.url = "github:nix-community/nixvim";
 
     asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
-
-    base16.url = "github:SenchoPens/base16.nix";
-    tt-schemes = {
-      url = "github:tinted-theming/schemes";
-      flake = false;
-    };
-    base16-zathura = {
-      url = "github:haozeke/base16-zathura";
-      flake = false;
-    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nix-index-database,
-    base16,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -41,8 +30,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
-          base16.nixosModule
-          {scheme = "${inputs.tt-schemes}/base16/gruvbox.yaml";}
           nix-index-database.nixosModules.nix-index
         ];
       };
