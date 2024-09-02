@@ -60,5 +60,6 @@
     ./user/defaults.nix
     ./user/neovim/neovim.nix
     ./user/theming.nix
+    ./user/yazi/yazi.nix
   ];
 }
