@@ -12,6 +12,7 @@
     metals
     typst-lsp
     emmet-language-server
+    jdt-language-server
 
     # Formatters
     rustfmt
