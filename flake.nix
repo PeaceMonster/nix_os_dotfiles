@@ -12,12 +12,14 @@
     nixvim.url = "github:nix-community/nixvim";
 
     asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nix-index-database,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -39,6 +41,7 @@
         inherit pkgs;
         modules = [
           inputs.nixvim.homeManagerModules.nixvim
+          stylix.homeManagerModules.stylix
           ./home.nix
         ];
       };

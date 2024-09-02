@@ -56,5 +56,6 @@
     ./user/languages.nix
     ./user/defaults.nix
     ./user/neovim/neovim.nix
+    ./user/theming.nix
   ];
 }
