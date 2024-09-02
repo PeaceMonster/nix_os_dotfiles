@@ -39,6 +39,14 @@
 
     keymaps = [
       {
+        key = "j";
+        action = "gj";
+      }
+      {
+        key = "k";
+        action = "gk";
+      }
+      {
         key = "<C-s>";
         action = "<cmd>w<cr>";
         options.desc = "Save";
