@@ -13,6 +13,7 @@
       cmp.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp-buffer.enable = true;
+      emmet.enable = true;
       flash.enable = true;
       floaterm.enable = true;
       fzf-lua.enable = true;
