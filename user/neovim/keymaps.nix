@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins.which-key.settings.spec = [
       {
-        __unkeyed = "<leader>b";
+        __unkeyed-1 = "<leader>b";
         group = "Buffers";
       }
       {

@@ -24,9 +24,10 @@
       mini = {
         enable = true;
         modules = {
-          pairs = {};
-          move = {};
           bracketed = {};
+          icons = {};
+          move = {};
+          pairs = {};
           surround = {};
         };
       };
@@ -34,6 +35,7 @@
       neoscroll.enable = true;
       noice.enable = true;
       oil.enable = true;
+      rustaceanvim.enable = true;
       treesitter.enable = true;
       trouble.enable = true;
       todo-comments.enable = true;
