@@ -1,5 +1,5 @@
 {...}: {
   stylix.enable = true;
 
-  stylix.image = "~/Billeder/starStable.png";
+  stylix.image = ./images/starStable.png;
 }
