@@ -47,6 +47,8 @@
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };
 
+  programs.zathura.enable = true;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
