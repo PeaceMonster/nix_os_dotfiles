@@ -57,6 +57,16 @@
         action = "<cmd>ZenMode<cr>";
         options.desc = "Toggle zenmode";
       }
+      {
+        key = "s";
+        action = "<cmd>lua require('flash').jump()<cr>";
+        options.desc = "Flash jump";
+      }
+      {
+        key = "S";
+        action = "<cmd>lua require('flash').treesitter()<cr>";
+        options.desc = "Flash treesitter jump";
+      }
 
       # Buffers
       {
