@@ -2,28 +2,32 @@
   programs.nixvim = {
     plugins.which-key.settings.spec = [
       {
-        __unkeyed = "<space>b";
+        __unkeyed = "<leader>b";
         group = "Buffers";
       }
       {
-        __unkeyed = "<space>t";
+        __unkeyed = "<leader>t";
         group = "Telescope";
       }
       {
-        __unkeyed = "<space>u";
+        __unkeyed = "<leader>u";
         group = "Ui";
       }
       {
-        __unkeyed = "<space>w";
+        __unkeyed = "<leader>w";
         group = "Windows";
       }
       {
-        __unkeyed = "<space>c";
+        __unkeyed = "<leader>c";
         group = "Code";
       }
       {
-        __unkeyed = "<space>c";
+        __unkeyed = "<leader>c";
         group = "Git";
+      }
+      {
+        __unkeyed = "<leader>s";
+        group = "Mini surround";
       }
     ];
     globals.mapleader = " ";
@@ -153,7 +157,7 @@
 
       # Telescope
       {
-        key = "<leader><space>";
+        key = "<leader><leader>";
         action = "<cmd>Telescope find_files<cr>";
         options.desc = "Telescope Find Files";
       }
@@ -233,6 +237,23 @@
         action = "<C-]>";
         options.desc = "Go to definition";
       }
+
+      # Guess Indent
+      {
+        key = "<leader>cg";
+        action = "<cmd>GuessIndent<cr>";
+        options.desc = "Guess indent of current file";
+      }
     ];
+
+    plugins.mini.modules.surround.mappings = {
+      add = "<leader>sa";
+      delete = "<leader>sd";
+      find = "<leader>sf";
+      find_left = "<leader>sF";
+      highlight = "<leader>sh";
+      replace = "<leader>sr";
+      update_n_lines = "<leader>sn";
+    };
   };
 }
