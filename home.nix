@@ -35,6 +35,7 @@
     comma
     bitwarden-desktop
     bottles
+    swaylock
   ];
 
   nixpkgs.config.allowUnfree = true;
