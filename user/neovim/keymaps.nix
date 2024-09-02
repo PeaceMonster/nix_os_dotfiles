@@ -29,7 +29,12 @@
         __unkeyed = "<leader>s";
         group = "Mini surround";
       }
+      {
+        __unkeyed = "<leader>o";
+        group = "Oil";
+      }
     ];
+
     globals.mapleader = " ";
 
     keymaps = [
@@ -254,6 +259,18 @@
       highlight = "<leader>sh";
       replace = "<leader>sr";
       update_n_lines = "<leader>sn";
+    };
+
+    plugins.oil.settings.keymaps = {
+      "<leader>ov" = "actions.select_vsplit";
+      "<leader>op" = "actions.preview";
+      "<leader>or" = "actions.refresh";
+      "<leader>oh" = "actions.toggle_hidden";
+
+      "<C-s>" = false;
+      "<C-p>" = false;
+      "<C-l>" = false;
+      "g." = false;
     };
   };
 }

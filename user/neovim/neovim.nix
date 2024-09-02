@@ -35,6 +35,7 @@
       neoscroll.enable = true;
       noice.enable = true;
       oil.enable = true;
+      rainbow-delimiters.enable = true;
       rustaceanvim.enable = true;
       treesitter.enable = true;
       trouble.enable = true;
