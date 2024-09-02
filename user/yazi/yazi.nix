@@ -39,10 +39,30 @@
           run = "cd ~/.dotfiles/";
           desc = "Go to dotfiles";
         }
+        {
+          on = ["m"];
+          run = "plugin bookmarks --args=save";
+          desc = "Save current position as a bookmark";
+        }
+        {
+          on = ["b" "j"];
+          run = "plugin bookmarks --args=jump";
+          desc = "Jump to a bookmark";
+        }
+        {
+          on = ["b" "d"];
+          run = "plugin bookmarks --args=delete";
+          desc = "Delete a bookmark";
+        }
+        {
+          on = ["b" "D"];
+          run = "plugin bookmarks --args=delete_all";
+          desc = "Delete all bookmarks";
+        }
       ];
     };
     plugins = {
-      bookmarks = ./bookmarks.yazi/init.lua;
+      bookmarks = ./bookmarks.yazi;
     };
   };
 }
