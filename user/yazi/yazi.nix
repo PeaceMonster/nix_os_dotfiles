@@ -42,7 +42,7 @@
       ];
     };
     plugins = {
-      bookmarks = ./bookmarks.yazi;
+      bookmarks = ./bookmarks.yazi/init.lua;
     };
   };
 }
