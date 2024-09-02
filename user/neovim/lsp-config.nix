@@ -8,5 +8,6 @@
     };
     metals.enable = true;
     typst-lsp.enable = true;
+    emmet-language-server.enable = true;
   };
 }
