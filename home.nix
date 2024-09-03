@@ -27,7 +27,6 @@
     rofi
     thunderbird
     mpv
-    # neovim
     kitty
     spicetify-cli
     zathura
@@ -36,6 +35,7 @@
     bitwarden-desktop
     bottles
     swaylock
+    blueman
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -47,6 +47,8 @@
     VISUAL = "nvim";
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };
+
+  services.mpris-proxy.enable = true;
 
   programs.zathura.enable = true;
 
