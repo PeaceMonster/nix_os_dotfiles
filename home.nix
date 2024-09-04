@@ -34,8 +34,8 @@
     comma
     bitwarden-desktop
     bottles
-    swaylock
     blueman
+    inkscape
   ];
 
   nixpkgs.config.allowUnfree = true;

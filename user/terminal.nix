@@ -24,6 +24,7 @@
     ffmpeg
     imagemagick
     pandoc
+    texliveSmall
     graphviz
     tectonic
     unzip
