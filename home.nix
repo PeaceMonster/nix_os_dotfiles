@@ -36,6 +36,7 @@
     bottles
     blueman
     inkscape
+    steam
   ];
 
   nixpkgs.config.allowUnfree = true;

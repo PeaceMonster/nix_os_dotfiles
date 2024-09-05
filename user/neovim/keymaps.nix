@@ -51,6 +51,7 @@
         action = "<cmd>w<cr>";
         options.desc = "Save";
         options.silent = true;
+        mode = ["n" "i"];
       }
       {
         key = "<leader>e";
