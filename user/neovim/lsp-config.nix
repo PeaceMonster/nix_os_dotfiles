@@ -10,5 +10,6 @@
     typst-lsp.enable = true;
     emmet-ls.enable = true;
     jdt-language-server.enable = true;
+    cssls.enable = true;
   };
 }

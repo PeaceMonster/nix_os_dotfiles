@@ -12,6 +12,7 @@
     typst-lsp
     emmet-language-server
     jdt-language-server
+    vscode-langservers-extracted
 
     # Formatters
     rustfmt

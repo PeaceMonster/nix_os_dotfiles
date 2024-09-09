@@ -272,6 +272,17 @@
         action = ":Z ";
         options.desc = "Open z-jump";
       }
+
+      # Yazi
+      {
+        key = "<leader>yy";
+        action.__raw = ''
+          function()
+            require('yazi').yazi()
+          end
+        '';
+        options.desc = "Open Yazi";
+      }
     ];
 
     plugins.mini.modules.surround.mappings = {

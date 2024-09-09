@@ -3,14 +3,15 @@
     enable = true;
     colorschemes.gruvbox.enable = true;
 
-    extraConfigVim = "set foldmethod=indent\n set foldlevel=99";
+    extraConfigVim = ''
+      set foldmethod=indent
+      set foldlevel=99
+      set nowrap
+    '';
 
     extraPlugins = with pkgs.vimPlugins; [
       # Mini Score thingy
       pest-vim
-
-      #Metals - Scala
-      nvim-metals
 
       #Zoxide integration
       zoxide-vim
@@ -24,6 +25,7 @@
       cmp-buffer.enable = true;
       dashboard.enable = true;
       emmet.enable = true;
+      fidget.enable = true;
       flash.enable = true;
       floaterm.enable = true;
       fzf-lua.enable = true;
@@ -60,6 +62,10 @@
       typst-vim.enable = true;
       vim-css-color.enable = true;
       which-key.enable = true;
+      yazi = {
+        enable = true;
+        settings.use_ya_for_events_reading = true;
+      };
       zen-mode.enable = true;
     };
   };

@@ -13,8 +13,6 @@
 
     asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
     stylix.url = "github:danth/stylix";
-
-    godot.url = "github:Quoteme/nixos-godot-bin";
   };
 
   outputs = {

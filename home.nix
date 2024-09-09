@@ -39,6 +39,8 @@
     neovide
     discord
     discordo
+    godot_4
+    pympress
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -66,6 +68,5 @@
     ./user/neovim/neovim.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
-    ./user/godot.nix
   ];
 }
