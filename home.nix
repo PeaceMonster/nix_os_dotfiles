@@ -36,7 +36,9 @@
     bottles
     blueman
     inkscape
-    steam
+    neovide
+    discord
+    discordo
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -64,5 +66,6 @@
     ./user/neovim/neovim.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
+    ./user/godot.nix
   ];
 }

@@ -258,6 +258,20 @@
         action = "<cmd>GuessIndent<cr>";
         options.desc = "Guess indent of current file";
       }
+
+      # Dashboard
+      {
+        key = "<leader>ud";
+        action = "<cmd>Dashboard<cr>";
+        options.desc = "Open Dashboard";
+      }
+
+      # Zoxide
+      {
+        key = "<leader>z";
+        action = ":Z ";
+        options.desc = "Open z-jump";
+      }
     ];
 
     plugins.mini.modules.surround.mappings = {

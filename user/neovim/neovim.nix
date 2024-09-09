@@ -3,8 +3,17 @@
     enable = true;
     colorschemes.gruvbox.enable = true;
 
+    extraConfigVim = "set foldmethod=indent\n set foldlevel=99";
+
     extraPlugins = with pkgs.vimPlugins; [
+      # Mini Score thingy
       pest-vim
+
+      #Metals - Scala
+      nvim-metals
+
+      #Zoxide integration
+      zoxide-vim
     ];
 
     plugins = {
@@ -13,6 +22,7 @@
       cmp.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp-buffer.enable = true;
+      dashboard.enable = true;
       emmet.enable = true;
       flash.enable = true;
       floaterm.enable = true;
@@ -36,8 +46,11 @@
       neoscroll.enable = true;
       noice.enable = true;
       oil.enable = true;
+      project-nvim = {
+        enable = true;
+        enableTelescope = true;
+      };
       rainbow-delimiters.enable = true;
-      rustaceanvim.enable = true;
       treesitter.enable = true;
       trouble.enable = true;
       todo-comments.enable = true;

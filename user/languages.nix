@@ -8,7 +8,6 @@
 
     # LSP
     nixd
-    rust-analyzer
     metals
     typst-lsp
     emmet-language-server
