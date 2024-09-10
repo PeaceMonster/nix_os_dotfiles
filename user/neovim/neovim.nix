@@ -25,7 +25,6 @@
       cmp-buffer.enable = true;
       dashboard.enable = true;
       emmet.enable = true;
-      fidget.enable = true;
       flash.enable = true;
       floaterm.enable = true;
       fzf-lua.enable = true;
@@ -46,13 +45,16 @@
       };
       neoclip.enable = true;
       neoscroll.enable = true;
+      nix-develop.enable = true;
       noice.enable = true;
+      nvim-ufo.enable = true;
       oil.enable = true;
       project-nvim = {
         enable = true;
         enableTelescope = true;
       };
       rainbow-delimiters.enable = true;
+      scope.enable = true;
       treesitter.enable = true;
       trouble.enable = true;
       todo-comments.enable = true;

@@ -38,7 +38,6 @@
     inkscape
     neovide
     discord
-    discordo
     godot_4
     pympress
   ];

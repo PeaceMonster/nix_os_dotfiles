@@ -33,6 +33,10 @@
         __unkeyed = "<leader>o";
         group = "Oil";
       }
+      {
+        __unkeyed-2 = "<leader><Tab>";
+        group = "Tabs";
+      }
     ];
 
     globals.mapleader = " ";
@@ -169,6 +173,28 @@
         options.desc = "Kill window";
       }
 
+      # Tabs
+      {
+        key = "<leader><Tab>n";
+        action = "<cmd>tabnext<cr>";
+        options.desc = "Next tab";
+      }
+      {
+        key = "<leader><Tab>p";
+        action = "<cmd>tabprevious<cr>";
+        options.desc = "Previous tab";
+      }
+      {
+        key = "<leader><Tab>c";
+        action = "<cmd>tabnew<cr>";
+        options.desc = "Create new tab";
+      }
+      {
+        key = "<leader><tab>d";
+        action = "<cmd>tabclose<cr>";
+        options.desc = "Close tab";
+      }
+
       # Telescope
       {
         key = "<leader><leader>";
@@ -216,6 +242,11 @@
         key = "<leader>cs";
         action = "<cmd>Trouble symbols toggle focus=false<cr>";
         options.desc = "Show Symbols";
+      }
+      {
+        key = "<leader>ct";
+        action = "<cmd>Trouble todo toggle";
+        options.desc = "Show Todos";
       }
 
       # Float Term
