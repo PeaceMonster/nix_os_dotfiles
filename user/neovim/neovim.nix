@@ -69,6 +69,7 @@
         settings.use_ya_for_events_reading = true;
       };
       zen-mode.enable = true;
+      zig.enable = true;
     };
   };
 
