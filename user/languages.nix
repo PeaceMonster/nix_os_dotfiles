@@ -5,6 +5,7 @@
     cargo
     rustc
     gcc9
+    zig
 
     # LSP
     nixd
