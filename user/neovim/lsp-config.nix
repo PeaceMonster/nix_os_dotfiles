@@ -8,8 +8,12 @@
     };
     metals.enable = true;
     typst-lsp.enable = true;
-    emmet-ls.enable = true;
     jdt-language-server.enable = true;
     cssls.enable = true;
+    zls.enable = true;
   };
+
+  programs.nixvim.extraConfigLua = ''
+    require('lspconfig').emmet_language_server.setup{}
+  '';
 }

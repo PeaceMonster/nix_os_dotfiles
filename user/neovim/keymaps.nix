@@ -37,6 +37,10 @@
         __unkeyed-2 = "<leader><Tab>";
         group = "Tabs";
       }
+      {
+        __unkeyed = "<leader>cl";
+        group = "Lsp";
+      }
     ];
 
     globals.mapleader = " ";
@@ -237,6 +241,13 @@
         options.desc = "Telescope neoclip";
       }
 
+      # CD
+      {
+        key = "<leader>cd";
+        action = "<cmd>cd %:h";
+        options.desc = "Cd here";
+      }
+
       # Trouble
       {
         key = "<leader>cs";
@@ -313,6 +324,13 @@
           end
         '';
         options.desc = "Open Yazi";
+      }
+
+      # Lsp
+      {
+        key = "<leader>cli";
+        action = "<cmd>LspInfo<cr>";
+        options.desc = "Lsp Info";
       }
     ];
 

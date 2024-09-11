@@ -21,6 +21,8 @@
   # environment.
   home.packages = with pkgs; [
     git
+    playerctl
+    pavucontrol
     qutebrowser
     nerdfonts
     gimp

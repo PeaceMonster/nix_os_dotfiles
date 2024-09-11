@@ -14,6 +14,7 @@
     emmet-language-server
     jdt-language-server
     vscode-langservers-extracted
+    zls
 
     # Formatters
     rustfmt
