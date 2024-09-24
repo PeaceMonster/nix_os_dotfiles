@@ -1,12 +1,13 @@
 {pkgs, ...}: {
   programs.nixvim = {
     enable = true;
-    colorschemes.gruvbox.enable = true;
+    # colorschemes.gruvbox.enable = true;
 
     extraConfigVim = ''
       set foldmethod=indent
       set foldlevel=99
       set nowrap
+      set ts=4
     '';
 
     extraPlugins = with pkgs.vimPlugins; [
@@ -20,6 +21,7 @@
     plugins = {
       airline.enable = true;
       barbar.enable = true;
+      ccc.enable = true;
       cmp.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp-buffer.enable = true;
@@ -49,6 +51,7 @@
       noice.enable = true;
       nvim-ufo.enable = true;
       oil.enable = true;
+      persistence.enable = true;
       project-nvim = {
         enable = true;
         enableTelescope = true;
