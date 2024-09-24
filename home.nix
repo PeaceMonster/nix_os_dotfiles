@@ -20,6 +20,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    aseprite
+    miniserve
+    blender
     git
     playerctl
     pavucontrol
@@ -42,6 +45,10 @@
     discord
     godot_4
     pympress
+    libreoffice-qt6-fresh
+
+    ferium
+    prismlauncher
   ];
 
   nixpkgs.config.allowUnfree = true;

@@ -54,6 +54,8 @@
     lg = "lazygit";
     nv = "nvim .";
     ya = "yy";
+    zaf = "zathura --fork";
+    act = "echo '/tmp/activefile' | entr";
   };
 
   programs.zoxide = {

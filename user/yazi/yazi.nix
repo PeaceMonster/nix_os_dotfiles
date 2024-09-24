@@ -59,6 +59,11 @@
           run = "plugin bookmarks --args=delete_all";
           desc = "Delete all bookmarks";
         }
+        {
+          on = "O";
+          run = "open $cwd";
+          desc = "Open current directory";
+        }
       ];
     };
     plugins = {

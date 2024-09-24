@@ -11,6 +11,7 @@
     jdt-language-server.enable = true;
     cssls.enable = true;
     zls.enable = true;
+    ts-ls.enable = true;
   };
 
   programs.nixvim.extraConfigLua = ''

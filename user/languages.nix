@@ -8,6 +8,7 @@
     zig
 
     # LSP
+    nodePackages.typescript-language-server
     nixd
     metals
     typst-lsp

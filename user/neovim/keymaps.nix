@@ -68,7 +68,7 @@
         options.silent = true;
       }
       {
-        key = "<leader>q";
+        key = "<leader>qq";
         action = "<cmd>qa<cr>";
         options.desc = "Quit Nvim";
       }
@@ -117,6 +117,11 @@
         action = ":BufferNext<cr>";
         options.desc = "Next Buffer";
         options.silent = true;
+      }
+      {
+        key = "<leader>bo";
+        action = "<cmd>BufferCloseAllButCurrentOrPinned<cr>";
+        options.desc = "CLose all other buffers";
       }
 
       #Windows
@@ -240,6 +245,11 @@
         action = "<cmd>Telescope neoclip<cr>";
         options.desc = "Telescope neoclip";
       }
+      {
+        key = "<leader>tb";
+        action = "<cmd>Telescope current_buffer_fuzzy_find<cr>";
+        options.desc = "Fuzzy find in current buffer";
+      }
 
       # CD
       {
@@ -331,6 +341,33 @@
         key = "<leader>cli";
         action = "<cmd>LspInfo<cr>";
         options.desc = "Lsp Info";
+      }
+
+      # CCC
+      {
+        key = "<leader>ccc";
+        action = "<cmd>CccPick<cr>";
+        options.desc = "Colorpicker";
+      }
+
+      # Persistence
+      {
+        key = "<leader>ql";
+        action.__raw = ''
+          function()
+            require("persistence").load({ last = true})
+          end
+        '';
+        options.desc = "Load last session";
+      }
+      {
+        key = "<leader>qd";
+        action.__raw = ''
+          function()
+            require("persistence").stop()
+          end
+        '';
+        options.desc = "Stop persistence";
       }
     ];
 
