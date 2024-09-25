@@ -16,10 +16,14 @@
     jdt-language-server
     vscode-langservers-extracted
     zls
+    python312Packages.jedi-language-server
 
     # Formatters
     rustfmt
     alejandra #nixfmt
     typstyle
+
+    # Pip packages
+    python312Packages.pyyaml
   ];
 }

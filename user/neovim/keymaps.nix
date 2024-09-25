@@ -184,22 +184,22 @@
 
       # Tabs
       {
-        key = "<leader><Tab>n";
+        key = "<Tab>n";
         action = "<cmd>tabnext<cr>";
         options.desc = "Next tab";
       }
       {
-        key = "<leader><Tab>p";
+        key = "<Tab>p";
         action = "<cmd>tabprevious<cr>";
         options.desc = "Previous tab";
       }
       {
-        key = "<leader><Tab>c";
+        key = "<Tab>c";
         action = "<cmd>tabnew<cr>";
         options.desc = "Create new tab";
       }
       {
-        key = "<leader><tab>d";
+        key = "<tab>d";
         action = "<cmd>tabclose<cr>";
         options.desc = "Close tab";
       }

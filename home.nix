@@ -21,34 +21,34 @@
   # environment.
   home.packages = with pkgs; [
     aseprite
-    miniserve
-    blender
-    git
-    playerctl
-    pavucontrol
-    qutebrowser
-    nerdfonts
-    gimp
-    rofi
-    thunderbird
-    mpv
-    kitty
-    spicetify-cli
-    zathura
-    spotify
-    comma
     bitwarden-desktop
-    bottles
+    blender
     blueman
-    inkscape
-    neovide
+    bottles
+    comma
     discord
-    godot_4
-    pympress
-    libreoffice-qt6-fresh
-
     ferium
+    gimp
+    git
+    godot_4
+    inkscape
+    kitty
+    libreoffice-qt6-fresh
+    miniserve
+    mpv
+    neovide
+    nerdfonts
+    pavucontrol
+    playerctl
     prismlauncher
+    pympress
+    qutebrowser
+    rofi
+    spicetify-cli
+    spotify
+    spotifyd
+    thunderbird
+    zathura
   ];
 
   nixpkgs.config.allowUnfree = true;

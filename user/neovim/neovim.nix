@@ -51,6 +51,7 @@
       noice.enable = true;
       nvim-ufo.enable = true;
       oil.enable = true;
+      orgmode.enable = true;
       persistence.enable = true;
       project-nvim = {
         enable = true;
