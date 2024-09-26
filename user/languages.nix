@@ -16,7 +16,6 @@
     jdt-language-server
     vscode-langservers-extracted
     zls
-    python312Packages.jedi-language-server
 
     # Formatters
     rustfmt

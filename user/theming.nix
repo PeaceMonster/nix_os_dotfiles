@@ -1,7 +1,7 @@
 {pkgs, ...}: let
   theme = "gruvbox-dark-medium";
   base16 = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-  bg_image = ./images/gruvbox.png;
+  bg_image = ./images/starStable.png;
 in {
   stylix.enable = true;
 

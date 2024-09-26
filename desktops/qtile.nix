@@ -5,6 +5,7 @@
   ...
 }: {
   services.xserver.windowManager.qtile.enable = true;
+  services.xserver.windowManager.qtile.extraPackages = python3Packages: with python3Packages; [pyyaml];
   nixpkgs.overlays = [
     (self: super: {
       qtile-unwrapped = super.qtile-unwrapped.overrideAttrs (_: rec {
