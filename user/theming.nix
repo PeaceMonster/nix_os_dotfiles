@@ -15,4 +15,5 @@ in {
 
   xdg.configFile."qtile/theme.yaml".source = base16;
   xdg.configFile."qtile/background.png".source = bg_image;
+  xdg.configFile."qutebrowser/theme.yaml".source = base16;
 }
