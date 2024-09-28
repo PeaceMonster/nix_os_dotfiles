@@ -1,8 +1,9 @@
 {pkgs, ...}: let
   # theme = "gruvbox-dark-medium";
-  theme = "da-one-sea";
+  # theme = "da-one-sea";
+  theme = "caroline";
   base16 = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-  bg_image = ./images/da-one-sea.jpeg;
+  bg_image = ./images/mlp-commie.jpg;
 in {
   stylix.enable = true;
 
