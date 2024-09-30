@@ -45,8 +45,7 @@
     qutebrowser
     rofi
     spicetify-cli
-    spotify
-    spotifyd
+    # spotify
     thunderbird
     zathura
   ];
