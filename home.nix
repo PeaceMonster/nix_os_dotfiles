@@ -24,7 +24,6 @@
     bitwarden-desktop
     blender
     blueman
-    bottles
     comma
     discord
     emacs

@@ -125,6 +125,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+    emacs
     wget
     git
     kanshi
@@ -133,6 +134,11 @@
     brightnessctl
     spotify
   ];
+
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
 
   programs.bash = {
     interactiveShellInit = ''
