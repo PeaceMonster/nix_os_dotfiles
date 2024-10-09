@@ -27,7 +27,9 @@
     bottles
     comma
     discord
+    emacs
     ferium
+    freecad
     gimp
     git
     godot_4

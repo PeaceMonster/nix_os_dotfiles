@@ -1,19 +1,20 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    python3
-    typst
     cargo
-    rustc
     gcc9
+    python3
+    rustc
+    typst
     zig
 
     # LSP
-    nodePackages.typescript-language-server
-    nixd
-    metals
-    typst-lsp
+    clang-tools
     emmet-language-server
     jdt-language-server
+    metals
+    nixd
+    nodePackages.typescript-language-server
+    typst-lsp
     vscode-langservers-extracted
     zls
 

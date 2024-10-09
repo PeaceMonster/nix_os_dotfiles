@@ -11,6 +11,9 @@
     jdt-language-server.enable = true;
     cssls.enable = true;
     zls.enable = true;
+    # sourcekit.enable = true;
+    # ccls.enable = true;
+    clangd.enable = true;
     ts-ls.enable = true;
   };
 

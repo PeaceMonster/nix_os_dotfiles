@@ -38,6 +38,7 @@
     yt-dlp # Video downloader
     jq # Json cli tool
     just
+    gnumake42
     file # Info about file
     asciidoctor
     fd # Better find

@@ -121,7 +121,12 @@
       {
         key = "<leader>bo";
         action = "<cmd>BufferCloseAllButCurrentOrPinned<cr>";
-        options.desc = "CLose all other buffers";
+        options.desc = "Close all other buffers";
+      }
+      {
+        key = "<leader>bp";
+        action = "<cmd>BufferPin<cr>";
+        options.desc = "Toggle Pin current buffer";
       }
 
       #Windows
