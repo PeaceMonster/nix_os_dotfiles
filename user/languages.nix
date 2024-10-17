@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     cargo
-    gcc9
+    # gcc9
+    clang
     python3
     rustc
     typst

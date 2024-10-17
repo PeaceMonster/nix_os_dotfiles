@@ -44,6 +44,7 @@
     prismlauncher
     pympress
     qutebrowser
+    qbittorrent
     rofi
     spicetify-cli
     # spotify

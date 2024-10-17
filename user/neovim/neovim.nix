@@ -30,6 +30,7 @@
       flash.enable = true;
       floaterm.enable = true;
       fzf-lua.enable = true;
+      fugitive.enable = true;
       guess-indent.enable = true;
       illuminate.enable = true;
       lsp.enable = true;
