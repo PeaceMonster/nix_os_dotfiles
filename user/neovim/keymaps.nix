@@ -94,7 +94,7 @@
         options.desc = "Flash treesitter jump";
       }
 
-      # Buffers
+      #   ── Buffers ───────────────────────────────────────────────────────────
       {
         key = "<leader>bs";
         action = ":BufferPick<cr>";
@@ -129,7 +129,11 @@
         options.desc = "Toggle Pin current buffer";
       }
 
-      #Windows
+      #   ── Windows ───────────────────────────────────────────────────────────
+      # ┌
+      # │ Alt relateret til
+      # │ vindues håndtering
+      # └
       {
         key = "<leader>|";
         action = "<cmd>vsplit<cr>";
@@ -187,7 +191,7 @@
         options.desc = "Kill window";
       }
 
-      # Tabs
+      #   ── Tabs ──────────────────────────────────────────────────────────────
       {
         key = "<Tab>n";
         action = "<cmd>tabnext<cr>";
@@ -209,7 +213,11 @@
         options.desc = "Close tab";
       }
 
-      # Telescope
+      #   ── Telescope ─────────────────────────────────────────────────────────
+      # ┌
+      # │ Bedste filsøgning
+      # │ Sætter en masse til
+      # └
       {
         key = "<leader><leader>";
         action = "<cmd>Telescope find_files<cr>";
@@ -256,14 +264,14 @@
         options.desc = "Fuzzy find in current buffer";
       }
 
-      # CD
+      #   ── CD ────────────────────────────────────────────────────────────────
       {
         key = "<leader>cd";
         action = "<cmd>cd %:h";
         options.desc = "Cd here";
       }
 
-      # Trouble
+      #   ── Trouble ───────────────────────────────────────────────────────────
       {
         key = "<leader>cs";
         action = "<cmd>Trouble symbols toggle focus=false<cr>";
@@ -275,7 +283,7 @@
         options.desc = "Show Todos";
       }
 
-      # Float Term
+      #   ── Float Term ────────────────────────────────────────────────────────
       {
         key = "<leader>ut";
         action = "<cmd>FloatermToggle<cr>";
@@ -288,49 +296,49 @@
         mode = ["t"];
       }
 
-      # Lazygit
+      #   ── Lazygit ───────────────────────────────────────────────────────────
       {
         key = "<leader>gg";
         action = "<cmd>LazyGit<cr>";
         options.desc = "Open LazyGit";
       }
 
-      # Fzflua
+      #   ── Fzflua ────────────────────────────────────────────────────────────
       {
         key = "<leader>ca";
         action = "<cmd>FzfLua lsp_code_actions<cr>";
         options.desc = "Code actions";
       }
 
-      # Lsp
+      #   ── Lsp ───────────────────────────────────────────────────────────────
       {
         key = "gd";
         action = "<C-]>";
         options.desc = "Go to definition";
       }
 
-      # Guess Indent
+      #   ── Guess Indent ──────────────────────────────────────────────────────
       {
         key = "<leader>cg";
         action = "<cmd>GuessIndent<cr>";
         options.desc = "Guess indent of current file";
       }
 
-      # Dashboard
+      #   ── Dashboard ─────────────────────────────────────────────────────────
       {
         key = "<leader>ud";
         action = "<cmd>Dashboard<cr>";
         options.desc = "Open Dashboard";
       }
 
-      # Zoxide
+      #   ── Zoxide ────────────────────────────────────────────────────────────
       {
         key = "<leader>z";
         action = ":Z ";
         options.desc = "Open z-jump";
       }
 
-      # Yazi
+      #   ── Yazi ──────────────────────────────────────────────────────────────
       {
         key = "<leader>yy";
         action.__raw = ''
@@ -341,21 +349,24 @@
         options.desc = "Open Yazi";
       }
 
-      # Lsp
+      #   ── Lsp ───────────────────────────────────────────────────────────────
       {
         key = "<leader>cli";
         action = "<cmd>LspInfo<cr>";
         options.desc = "Lsp Info";
       }
 
-      # CCC
+      #   ── CCC ───────────────────────────────────────────────────────────────
       {
         key = "<leader>ccc";
         action = "<cmd>CccPick<cr>";
         options.desc = "Colorpicker";
       }
 
-      # Persistence
+      #   ── Persistence ───────────────────────────────────────────────────────
+      #┌
+      #│ Sætter sessions op
+      #└
       {
         key = "<leader>ql";
         action.__raw = ''
@@ -373,6 +384,28 @@
           end
         '';
         options.desc = "Stop persistence";
+      }
+
+      #   ── Comment Box ───────────────────────────────────────────────────────
+      #  ┌
+      #  │ Håndterer smukke
+      #  │ kasser i forskellige
+      #  │ kommentare
+      #  └
+      {
+        key = "<leader>ccb";
+        action = "<cmd>CBccbox<cr>";
+        options.desc = "Comment Box";
+      }
+      {
+        key = "<leader>ccl";
+        action = "<cmd>CBclline<cr>";
+        options.desc = "Comment Line";
+      }
+      {
+        key = "<leader>ccq";
+        action = "<cmd>CBllbox12<cr>";
+        options.desc = "Comment Quote";
       }
     ];
 

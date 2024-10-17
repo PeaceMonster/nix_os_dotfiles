@@ -25,6 +25,7 @@
       cmp.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp-buffer.enable = true;
+      comment-box.enable = true;
       dashboard.enable = true;
       emmet.enable = true;
       flash.enable = true;
