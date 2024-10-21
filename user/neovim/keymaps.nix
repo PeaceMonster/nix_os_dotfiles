@@ -407,6 +407,27 @@
         action = "<cmd>CBllbox12<cr>";
         options.desc = "Comment Quote";
       }
+
+      #   ── Fugitive ──────────────────────────────────────────────────────────
+      # ┌
+      # │ Praktiske git integrationer
+      # │ inde i vim
+      # └
+      {
+        key = "<leader>gf";
+        action = "<cmd>G<cr>";
+        options.desc = "Open Git Fugitive";
+      }
+      {
+        key = "<leader>gd";
+        action = "<cmd>G diff<cr>";
+        options.desc = "Opens diff for current file";
+      }
+      {
+        key = "<leader>gb";
+        action = "<cmd>G blame<cr>";
+        options.desc = "Git blame current file";
+      }
     ];
 
     plugins.mini.modules.surround.mappings = {
