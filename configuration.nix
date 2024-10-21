@@ -133,7 +133,10 @@
     pamixer
     brightnessctl
     spotify
+    libsForQt5.kpmcore
+    partition-manager
   ];
+  services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
   services.emacs = {
     enable = true;

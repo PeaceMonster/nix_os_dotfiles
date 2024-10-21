@@ -267,7 +267,7 @@
       #   ── CD ────────────────────────────────────────────────────────────────
       {
         key = "<leader>cd";
-        action = "<cmd>cd %:h";
+        action = "<cmd>cd %:h<cr>";
         options.desc = "Cd here";
       }
 
