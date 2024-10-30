@@ -5,7 +5,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -125,9 +126,16 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    emacs
     wget
     git
+    (
+      (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
+        epkgs: with epkgs; [
+          (treesit-grammars.with-grammars (grammars: with grammars; [ tree-sitter-typst ]))
+        ]
+      )
+    )
+    emacsPackages.treesit-grammars.with-all-grammars
     kanshi
     wdisplays
     pamixer
@@ -142,6 +150,16 @@
     enable = true;
     package = pkgs.emacs;
   };
+
+  # programs.emacs = {
+  #   defaultPkg = (
+  #     (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
+  #       epkgs: with epkgs; [
+  #         (treesit-grammars.with-grammars (grammars: with grammars; [ tree-sitter-gdscript ]))
+  #       ]
+  #     )
+  #   );
+  # };
 
   programs.bash = {
     interactiveShellInit = ''

@@ -1,10 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    cargo
     # gcc9
+    cargo
     clang
     python3
+    racket
     rustc
+    typescript
     typst
     zig
 
@@ -18,6 +20,7 @@
     typst-lsp
     vscode-langservers-extracted
     zls
+    rust-analyzer
 
     # Formatters
     rustfmt
@@ -26,5 +29,8 @@
 
     # Pip packages
     python312Packages.pyyaml
+
+    tree-sitter
+    tree-sitter-grammars.tree-sitter-typst
   ];
 }

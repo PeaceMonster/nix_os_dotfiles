@@ -39,6 +39,8 @@
     jq # Json cli tool
     just
     gnumake42
+    cmake
+    libtool
     file # Info about file
     asciidoctor
     fd # Better find
