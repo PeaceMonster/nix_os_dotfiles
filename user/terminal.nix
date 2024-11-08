@@ -24,7 +24,6 @@
     ffmpeg
     imagemagick
     pandoc
-    texliveSmall
     graphviz
     tectonic
     unzip
@@ -38,6 +37,7 @@
     yt-dlp # Video downloader
     jq # Json cli tool
     just
+    ispell
     gnumake42
     cmake
     libtool

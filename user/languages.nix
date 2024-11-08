@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    # gcc9
     cargo
-    clang
+    gnat14
+    lua
+    nodejs_22
     python3
     racket
     rustc
@@ -21,6 +22,7 @@
     vscode-langservers-extracted
     zls
     rust-analyzer
+    texlab
 
     # Formatters
     rustfmt

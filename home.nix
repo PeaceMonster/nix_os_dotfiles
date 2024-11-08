@@ -50,6 +50,11 @@
     # spotify
     thunderbird
     zathura
+    bottles
+
+
+    #Latex things
+    texliveMedium
   ];
 
   nixpkgs.config.allowUnfree = true;
