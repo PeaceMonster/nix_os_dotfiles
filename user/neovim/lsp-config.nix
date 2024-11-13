@@ -8,7 +8,7 @@
     };
     metals.enable = true;
     typst_lsp.enable = true;
-    jdt_language-server.enable = true;
+    jdtls.enable = true;
     cssls.enable = true;
     zls.enable = true;
     # sourcekit.enable = true;

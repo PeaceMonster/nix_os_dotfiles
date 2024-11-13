@@ -10,6 +10,7 @@
     typescript
     typst
     zig
+    zulu21
 
     # LSP
     clang-tools

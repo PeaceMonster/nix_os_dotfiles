@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
     aseprite
     bitwarden-desktop
-    blender
     blueman
     comma
     discord
@@ -52,6 +51,7 @@
     zathura
     bottles
 
+    prusa-slicer
 
     #Latex things
     texliveMedium

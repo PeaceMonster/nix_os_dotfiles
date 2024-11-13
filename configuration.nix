@@ -35,7 +35,7 @@
   };
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
-  services.xserver.libinput.touchpad.disableWhileTyping = false;
+  services.libinput.touchpad.disableWhileTyping = false;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
