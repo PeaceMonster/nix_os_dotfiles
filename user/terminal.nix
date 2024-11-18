@@ -51,6 +51,7 @@
     wget
     xclip
     wl-clipboard
+    nh
   ];
 
   home.shellAliases = {
