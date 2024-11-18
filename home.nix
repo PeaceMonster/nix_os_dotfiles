@@ -38,23 +38,26 @@
     mpv
     neovide
     nerdfonts
-    pavucontrol
-    playerctl
     prismlauncher
     pympress
     qutebrowser
     qbittorrent
     rofi
-    spicetify-cli
-    # spotify
     thunderbird
     zathura
     bottles
 
-    prusa-slicer
+    #Musik ting
+    pavucontrol
+    playerctl
+    shortwave
+    spicetify-cli
+
+    prusa-slicer # 3D print
 
     #Latex things
-    texliveMedium
+    texliveFull
+    python312Packages.pygments
   ];
 
   nixpkgs.config.allowUnfree = true;
