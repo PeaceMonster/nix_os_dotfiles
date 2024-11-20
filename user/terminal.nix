@@ -37,7 +37,9 @@
     yt-dlp # Video downloader
     jq # Json cli tool
     just
-    ispell
+    aspell
+    aspellDicts.da
+    aspellDicts.en
     gnumake42
     cmake
     libtool
