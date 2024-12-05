@@ -5,6 +5,10 @@
   ...
 }: {
   home.packages = with pkgs; [
+
+    #Emulator
+    kitty
+
     # Terminals
     fish
     zsh
@@ -19,6 +23,7 @@
     rofi
     tldr
     bacon
+    git
 
     # File manipulation
     ffmpeg
@@ -37,6 +42,9 @@
     yt-dlp # Video downloader
     jq # Json cli tool
     just
+    miniserve # Serve files
+    comma # Temp programs
+    rofi # Dmenu
 
     #Spelling
     hunspell

@@ -20,45 +20,50 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    aseprite
-    bitwarden-desktop
-    blueman
-    comma
-    discord
-    emacs
-    ferium
-    freecad
-    gimp
-    git
-    godot_4
-    inkscape
-    kitty
-    libreoffice-qt6-fresh
-    miniserve
-    mpv
-    neovide
+    # System
     nerdfonts
+
+    # Game Related
+    bottles
     prismlauncher
-    pympress
+    ferium
+    discord
+
+    # Editor
+    neovide
+    emacs
+    libreoffice-qt6-fresh
+
+    #Browser
     qutebrowser
     brave
-    qbittorrent
-    rofi
-    thunderbird
-    zathura
-    bottles
 
-    #Musik ting
+    # Creation
+    freecad
+    gimp
+    inkscape
+    prusa-slicer # 3D print
+    godot_4 # Game Engine
+    aseprite
+
+    #Media
+    mpv
+    pympress
     pavucontrol
     playerctl
     shortwave
     spicetify-cli
-
-    prusa-slicer # 3D print
+    blueman
+    zathura
+    qbittorrent
 
     #Latex things
     texliveFull
     python312Packages.pygments
+
+    #Utils
+    bitwarden-desktop
+    thunderbird
   ];
 
   nixpkgs.config.allowUnfree = true;
