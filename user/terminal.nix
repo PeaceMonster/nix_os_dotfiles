@@ -42,7 +42,6 @@
     hunspell
     hunspellDicts.da_DK
     hunspellDicts.en_US
-    hunspellDicts.en_GB-ize
 
     gnumake42
     cmake

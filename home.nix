@@ -41,6 +41,7 @@
     prismlauncher
     pympress
     qutebrowser
+    brave
     qbittorrent
     rofi
     thunderbird
