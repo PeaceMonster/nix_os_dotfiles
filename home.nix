@@ -19,9 +19,11 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+
+
+
   home.packages = with pkgs; [
     # System
-    nerdfonts
 
     # Game Related
     bottles
@@ -44,7 +46,7 @@
     inkscape
     prusa-slicer # 3D print
     godot_4 # Game Engine
-    aseprite
+    # Temp disable due to compile time - aseprite
 
     #Media
     mpv
@@ -91,5 +93,6 @@
     ./user/neovim/neovim.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
+    ./fonts.nix
   ];
 }
