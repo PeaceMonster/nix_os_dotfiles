@@ -16,6 +16,7 @@
     clang-tools
     emmet-language-server
     jdt-language-server
+    lua-language-server
     metals
     nixd
     nodePackages.typescript-language-server
