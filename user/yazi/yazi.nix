@@ -60,6 +60,11 @@
           desc = "Delete all bookmarks";
         }
         {
+          on = ["c" "a"];
+          run = "plugin compress";
+          desc = "Archive selected files";
+        }
+        {
           on = "O";
           run = "open $cwd";
           desc = "Open current directory";
@@ -68,6 +73,7 @@
     };
     plugins = {
       bookmarks = ./bookmarks.yazi;
+      compress = ./compress.yazi;
     };
   };
 }
