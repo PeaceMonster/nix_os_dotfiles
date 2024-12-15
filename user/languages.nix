@@ -20,7 +20,7 @@
     metals
     nixd
     nodePackages.typescript-language-server
-    typst-lsp
+    tinymist
     vscode-langservers-extracted
     zls
     rust-analyzer
