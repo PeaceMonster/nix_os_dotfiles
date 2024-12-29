@@ -24,6 +24,7 @@
     tldr
     bacon
     git
+    rclone
 
     # File manipulation
     ffmpeg

@@ -140,6 +140,7 @@
     )
     emacsPackages.treesit-grammars.with-all-grammars
     kanshi
+    kanata
     wdisplays
     pamixer
     brightnessctl
