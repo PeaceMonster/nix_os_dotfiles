@@ -25,6 +25,7 @@
     bacon
     git
     rclone
+    peaclock
 
     # File manipulation
     ffmpeg
