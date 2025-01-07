@@ -66,6 +66,7 @@
     #Utils
     bitwarden-desktop
     thunderbird
+    ledger
   ];
 
   nixpkgs.config.allowUnfree = true;
