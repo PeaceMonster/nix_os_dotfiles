@@ -38,6 +38,7 @@
     pdftk
 
     # Misc
+    direnv
     ripgrep # Seach tool like grep
     entr # Run command on file update
     skim # Fuzzy finder
