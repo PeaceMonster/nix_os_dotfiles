@@ -30,7 +30,10 @@
 
     # Ocaml Things
     dune_3
-    opam
+    ocamlPackages.merlin
+    ocamlPackages.menhir
+    ocamlPackages.printbox
+    ocamlPackages.printbox-text
 
     # Formatters
     rustfmt
