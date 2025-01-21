@@ -28,6 +28,10 @@
     rust-analyzer
     texlab
 
+    # Ocaml Things
+    dune_3
+    opam
+
     # Formatters
     rustfmt
     alejandra #nixfmt
