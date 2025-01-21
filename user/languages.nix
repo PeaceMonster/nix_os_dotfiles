@@ -4,6 +4,7 @@
     gnat14
     lua
     nodejs_22
+    ocaml
     python3
     racket
     rustc
@@ -18,6 +19,7 @@
     jdt-language-server
     lua-language-server
     metals
+    ocamlPackages.lsp
     nixd
     nodePackages.typescript-language-server
     tinymist
