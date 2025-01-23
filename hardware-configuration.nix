@@ -17,8 +17,9 @@ in {
 
   boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "rtsx_usb_sdmmc"];
   boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel" "asus-wmi-screenpad"];
-  boot.extraModulePackages = [asus-wmi-screenpad];
+  # boot.kernelModules = ["kvm-intel" "asus-wmi-screenpad"];
+  boot.kernelModules = ["kvm-intel"];
+  # boot.extraModulePackages = [asus-wmi-screenpad];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/badf45db-8a04-4990-a2d4-ae4413f11db9";
