@@ -30,7 +30,11 @@
 
     # Ocaml Things
     dune_3
+    opam
     ocamlPackages.merlin
+    ocamlPackages.utop
+    ocamlPackages.ocp-indent
+    ocamlPackages.ocamlformat
     ocamlPackages.menhir
     ocamlPackages.printbox
     ocamlPackages.printbox-text

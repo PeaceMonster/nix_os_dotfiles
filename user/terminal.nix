@@ -95,6 +95,11 @@
     enableTransience = true;
   };
 
+  programs.opam = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
   };
