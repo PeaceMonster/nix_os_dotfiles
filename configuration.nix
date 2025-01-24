@@ -33,6 +33,14 @@
     '';
     wantedBy = ["multi-user.target"];
   };
+
+  systemd.services.kanataStart = {
+    description = "Starts kanata";
+    script = ''
+      kanata -c /home/ugilt/.config/kanata/kanata.kbd
+    '';
+    wantedBy = ["multi-user.target"];
+  };
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.libinput.touchpad.disableWhileTyping = false;
