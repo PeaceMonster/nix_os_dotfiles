@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   # Home Manager needs a bit of information about you and the paths it should
@@ -67,7 +68,10 @@
     bitwarden-desktop
     thunderbird
     ledger
-  ];
+  ] ++ (with pkgs-stable ; [
+    nerdfonts
+    rstudio
+  ]);
 
   nixpkgs.config.allowUnfree = true;
 
@@ -94,6 +98,5 @@
     ./user/neovim/neovim.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
-    ./fonts.nix
   ];
 }
