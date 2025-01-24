@@ -19,6 +19,7 @@
 
     # Duo screenpad hack
     asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
+    asus-wmi-screenpad.inputs.nixpkgs.follows = "nixpkgs";
 
     # Stylix
     stylix.url = "github:danth/stylix";
