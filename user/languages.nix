@@ -6,6 +6,7 @@
     nodejs_22
     ocaml
     python3
+    R
     racket
     rustc
     typescript
@@ -36,8 +37,6 @@
     ocamlPackages.ocp-indent
     ocamlPackages.ocamlformat
     ocamlPackages.menhir
-    ocamlPackages.printbox
-    ocamlPackages.printbox-text
 
     # Formatters
     rustfmt
@@ -49,5 +48,8 @@
 
     tree-sitter
     tree-sitter-grammars.tree-sitter-typst
-  ];
+  ] ++ (with pkgs.rPackages; [ # R packages
+      stringi
+      stringr
+  ]);
 }
