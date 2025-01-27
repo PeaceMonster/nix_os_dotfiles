@@ -34,19 +34,16 @@
     wantedBy = ["multi-user.target"];
   };
 
-  systemd.services.kanataStart = {
-    description = "Starts kanata";
-    script = ''
-      kanata -c /home/ugilt/.config/kanata/kanata.kbd
-    '';
-    wantedBy = ["multi-user.target"];
-  };
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.libinput.touchpad.disableWhileTyping = false;
 
 
-  services.kanata.enable = true;
+  services.kanata = {
+    keyboards.internalKeyboard = {
+      configFile = ./kanata.kbd
+    };
+  };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
