@@ -1,4 +1,12 @@
-{pkgs, ...}: {
+{pkgs,pkgs-stable,...}:
+let
+  Rstudio-with-packages = pkgs-stable.rstudioWrapper.override{
+    packages = with pkgs.rPackages; [ # R packages
+      # stringi
+      # stringr
+  ];};
+in
+{
   home.packages = with pkgs; [
     cargo
     gnat14
@@ -6,7 +14,7 @@
     nodejs_22
     ocaml
     python3
-    R
+    Rstudio-with-packages
     racket
     rustc
     typescript
@@ -17,6 +25,7 @@
     # LSP
     clang-tools
     emmet-language-server
+    go
     jdt-language-server
     lua-language-server
     metals
@@ -33,6 +42,7 @@
     dune_3
     opam
     ocamlPackages.merlin
+    ocamlPackages.findlib
     ocamlPackages.utop
     ocamlPackages.ocp-indent
     ocamlPackages.ocamlformat
@@ -48,8 +58,5 @@
 
     tree-sitter
     tree-sitter-grammars.tree-sitter-typst
-  ] ++ (with pkgs.rPackages; [ # R packages
-      stringi
-      stringr
-  ]);
+  ];
 }

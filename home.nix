@@ -70,7 +70,6 @@
     ledger
   ] ++ (with pkgs-stable ; [
     nerdfonts
-    rstudio
   ]);
 
   nixpkgs.config.allowUnfree = true;
