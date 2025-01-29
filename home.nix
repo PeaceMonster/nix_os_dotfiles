@@ -46,15 +46,12 @@
     gimp
     inkscape
     prusa-slicer # 3D print
-    godot_4 # Game Engine
-    # Temp disable due to compile time - aseprite
 
     #Media
     mpv
     pympress
     pavucontrol
     playerctl
-    shortwave
     spicetify-cli
     blueman
     zathura
@@ -78,7 +75,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    VISUAL = "nvim";
+    VISUAL = "emacs";
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };
 

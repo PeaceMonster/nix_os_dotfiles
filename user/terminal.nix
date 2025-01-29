@@ -58,7 +58,6 @@
     cmake
     libtool
     file # Info about file
-    asciidoctor
     fd # Better find
     yazi # Terminal File manager
     zoxide # z jump go brrr
@@ -95,10 +94,6 @@
     enableTransience = true;
   };
 
-  programs.opam = {
-    enable = true;
-    enableFishIntegration = true;
-  };
 
   programs.zsh = {
     enable = true;

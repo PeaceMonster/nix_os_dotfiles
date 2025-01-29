@@ -41,7 +41,7 @@
 
   services.kanata = {
     keyboards.internalKeyboard = {
-      configFile = ./kanata.kbd
+      configFile = ./kanata.kbd;
     };
   };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -139,7 +139,11 @@
     (
       (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
         epkgs: with epkgs; [
-          (treesit-grammars.with-grammars (grammars: with grammars; [ tree-sitter-typst ]))
+          (treesit-grammars.with-grammars (grammars: with grammars; [
+            tree-sitter-typst
+            tree-sitter-nix
+            tree
+          ]))
         ]
       )
     )

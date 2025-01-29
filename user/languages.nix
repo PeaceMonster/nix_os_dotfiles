@@ -27,36 +27,19 @@ in
     emmet-language-server
     go
     jdt-language-server
-    lua-language-server
     metals
-    ocamlPackages.lsp
     nixd
-    nodePackages.typescript-language-server
     tinymist
     vscode-langservers-extracted
     zls
     rust-analyzer
     texlab
 
-    # Ocaml Things
-    dune_3
-    opam
-    ocamlPackages.merlin
-    ocamlPackages.findlib
-    ocamlPackages.utop
-    ocamlPackages.ocp-indent
-    ocamlPackages.ocamlformat
-    ocamlPackages.menhir
-
     # Formatters
     rustfmt
     alejandra #nixfmt
     typstyle
 
-    # Pip packages
-    python312Packages.pyyaml
-
     tree-sitter
-    tree-sitter-grammars.tree-sitter-typst
   ];
 }
