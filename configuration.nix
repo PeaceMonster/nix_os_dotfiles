@@ -40,6 +40,7 @@
 
 
   services.kanata = {
+    enable = true;
     keyboards.internalKeyboard = {
       configFile = ./kanata.kbd;
     };

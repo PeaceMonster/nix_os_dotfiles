@@ -26,6 +26,7 @@
     git
     rclone
     peaclock
+    percollate # Tool for turning webpages into pdfs
 
     # File manipulation
     ffmpeg
@@ -56,6 +57,7 @@
 
     gnumake42
     cmake
+    gdb
     libtool
     file # Info about file
     fd # Better find

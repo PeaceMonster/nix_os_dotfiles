@@ -2,8 +2,9 @@
     caps s d f j k l
 )
 
-(defalias
-    cec (tap-hold 200 200 esc lctl))
+(defcfg process-unmapped-keys yes)
+
+(defalias cec (tap-hold 200 200 esc lctl))
 
 (defalias fshift (tap-hold 200 200 f ShiftLeft))
 (defalias jshift (tap-hold 200 200 j ShiftLeft))
