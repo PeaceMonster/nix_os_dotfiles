@@ -67,6 +67,7 @@
     bitwarden-desktop
     thunderbird
     ledger
+    clockify # Time keeper for projects
   ] ++ (with pkgs-stable ; [
     nerdfonts
   ]);

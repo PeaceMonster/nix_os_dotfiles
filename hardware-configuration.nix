@@ -18,7 +18,6 @@ in {
   boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "rtsx_usb_sdmmc"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel" "asus-wmi-screenpad"];
-  # boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [asus-wmi-screenpad];
 
   fileSystems."/" = {
@@ -47,4 +46,5 @@ in {
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  powerManagement.cpuFreqGovernor = "performance";
 }

@@ -13,6 +13,7 @@ in
     lua
     nodejs_22
     ocaml
+    opam
     python3
     Rstudio-with-packages
     racket
@@ -34,6 +35,7 @@ in
     zls
     rust-analyzer
     texlab
+    python312Packages.python-lsp-server
 
     # Formatters
     rustfmt
