@@ -57,6 +57,8 @@
     blueman
     zathura
     qbittorrent
+    itch
+
 
     #Latex things
     texliveFull
