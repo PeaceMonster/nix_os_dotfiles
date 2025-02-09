@@ -20,13 +20,14 @@
     lazygit
     vim
     git
+    jujutsu
     rofi
     tldr
     bacon
     git
     rclone
     peaclock
-    percollate # Tool for turning webpages into pdfs
+    percollate # Tool for turning webpages into pdms
 
     # File manipulation
     ffmpeg
@@ -74,6 +75,7 @@
   home.shellAliases = {
     lg = "lazygit";
     nv = "nvim .";
+    ec = "emacsclient -t .";
     ya = "yy";
     zaf = "zathura --fork";
     act = "echo '/tmp/activefile' | entr";

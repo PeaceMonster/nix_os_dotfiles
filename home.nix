@@ -34,7 +34,7 @@
 
     # Editor
     neovide
-    emacs
+    #emacs
     libreoffice-qt6-fresh
     obsidian
 
