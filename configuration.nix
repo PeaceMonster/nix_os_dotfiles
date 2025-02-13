@@ -160,7 +160,6 @@
     partition-manager
     openssl
 
-    bitlbee # IM to irc
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
@@ -168,6 +167,7 @@
     enable = true;
     package = pkgs.emacs;
   };
+
 
   # programs.emacs = {
   #   defaultPkg = (
