@@ -74,7 +74,6 @@
     ledger
     clockify # Time keeper for projects
 
-    bitlbee # IM to irc
   ] ++ (with pkgs-stable ; [
     nerdfonts
   ]);

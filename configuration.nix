@@ -159,6 +159,8 @@
     libsForQt5.kpmcore
     partition-manager
     openssl
+
+    bitlbee # IM to irc
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
