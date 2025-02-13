@@ -68,8 +68,13 @@
     #Utils
     bitwarden-desktop
     thunderbird
+    aerc
+    mu # emacs mail
+    isync
     ledger
     clockify # Time keeper for projects
+
+    bitlbee # IM to irc
   ] ++ (with pkgs-stable ; [
     nerdfonts
   ]);
@@ -99,5 +104,6 @@
     ./user/neovim/neovim.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
+    ./mail.nix
   ];
 }

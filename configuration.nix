@@ -140,6 +140,7 @@
     (
       (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
         epkgs: with epkgs; [
+          mu4e
           (treesit-grammars.with-grammars (grammars: with grammars; [
             tree-sitter-typst
             tree-sitter-nix
@@ -157,6 +158,7 @@
     spotify
     libsForQt5.kpmcore
     partition-manager
+    openssl
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
