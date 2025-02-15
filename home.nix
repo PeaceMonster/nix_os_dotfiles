@@ -103,5 +103,6 @@
     ./user/theming.nix
     ./user/yazi/yazi.nix
     ./mail.nix
+    ./user/hyprland.nix
   ];
 }

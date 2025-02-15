@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./desktops/qtile.nix
+    ./desktops/hyprland.nix
   ];
 
   # Bootloader.
@@ -159,9 +160,6 @@
     libsForQt5.kpmcore
     partition-manager
     openssl
-
-    awesome
-
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
