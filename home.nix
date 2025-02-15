@@ -74,13 +74,12 @@
     ledger
     clockify # Time keeper for projects
 
+
   ] ++ (with pkgs-stable ; [
     nerdfonts
   ]);
-
   nixpkgs.config.allowUnfree = true;
 
-  # home.file = { };
 
   home.sessionVariables = {
     EDITOR = "nvim";

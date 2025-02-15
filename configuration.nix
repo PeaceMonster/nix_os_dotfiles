@@ -160,8 +160,12 @@
     partition-manager
     openssl
 
+    awesome
+
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
+
+
 
   services.emacs = {
     enable = true;
