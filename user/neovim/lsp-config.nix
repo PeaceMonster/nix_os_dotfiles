@@ -7,7 +7,7 @@
       installRustc = false;
     };
     metals.enable = true;
-    typst_lsp.enable = true;
+    # typst_lsp.enable = true;
     jdtls.enable = true;
     cssls.enable = true;
     zls.enable = true;

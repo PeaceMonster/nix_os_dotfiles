@@ -11,7 +11,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./desktops/qtile.nix
-    ./desktops/hyprland.nix
+    ./desktops/plasma.nix
+    # ./desktops/hyprland.nix
   ];
 
   # Bootloader.
@@ -80,6 +81,9 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.xserver = {
+    desktopManager.xfce.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -204,6 +208,13 @@
         groups = ["wheel"];
       }
     ];
+  };
+
+  programs.nix-ld = {
+   enable = true;
+   libraries = with pkgs; [
+
+   ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

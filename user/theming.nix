@@ -13,6 +13,15 @@ in {
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-medium.yaml";
   stylix.base16Scheme = base16;
 
+  stylix.autoEnable = false;
+
+  stylix.targets = {
+    # console.enable = true;
+    fish.enable = true;
+    nixvim.enable = true;
+
+  };
+
   xdg.configFile."qtile/theme.yaml".source = base16;
   xdg.configFile."qtile/background.png".source = bg_image;
   xdg.configFile."qutebrowser/theme.yaml".source = base16;

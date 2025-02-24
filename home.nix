@@ -24,7 +24,7 @@
 
 
   home.packages = with pkgs; [
-    # System
+    virtualbox
 
     # Game Related
     bottles
@@ -34,7 +34,6 @@
 
     # Editor
     neovide
-    #emacs
     libreoffice-qt6-fresh
     obsidian
 
@@ -103,6 +102,6 @@
     ./user/theming.nix
     ./user/yazi/yazi.nix
     ./mail.nix
-    ./user/hyprland/default.nix
+    # ./user/hyprland/default.nix
   ];
 }
