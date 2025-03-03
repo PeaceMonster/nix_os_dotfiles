@@ -18,6 +18,7 @@ in
     Rstudio-with-packages
     racket
     rustc
+    wasm-pack
     typescript
     typst
     zig

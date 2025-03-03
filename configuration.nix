@@ -12,6 +12,7 @@
     ./hardware-configuration.nix
     ./desktops/qtile.nix
     ./desktops/plasma.nix
+    ./desktops/fvwm.nix
     # ./desktops/hyprland.nix
   ];
 
@@ -213,9 +214,12 @@
   programs.nix-ld = {
    enable = true;
    libraries = with pkgs; [
-
+     pkg-config
+     openssl
    ];
   };
+
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

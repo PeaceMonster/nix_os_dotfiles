@@ -19,6 +19,7 @@ in {
     # console.enable = true;
     fish.enable = true;
     nixvim.enable = true;
+    gtk.enable = true;
 
   };
 

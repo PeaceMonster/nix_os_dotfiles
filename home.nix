@@ -24,7 +24,6 @@
 
 
   home.packages = with pkgs; [
-    virtualbox
 
     # Game Related
     bottles
