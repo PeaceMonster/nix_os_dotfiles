@@ -64,6 +64,7 @@
     fd # Better find
     yazi # Terminal File manager
     zoxide # z jump go brrr
+    tmsu
     bat
     fzf
     wget
