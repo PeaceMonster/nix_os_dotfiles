@@ -55,9 +55,6 @@
       itch
 
       #Latex things
-      texliveFull
-      python312Packages.pygments
-      python312Packages.grip
 
       #Utils
       bitwarden-desktop

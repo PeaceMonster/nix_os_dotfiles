@@ -10,6 +10,7 @@
 
   config = lib.mkIf config.languages.rust.enable {
     home.packages = with pkgs; [
+      wasm-pack
       cargo
       rust-analyzer
       rustfmt
