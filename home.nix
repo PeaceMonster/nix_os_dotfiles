@@ -66,7 +66,7 @@
       mu # emacs mail
       isync
       ledger
-      clockify # Time keeper for projects
+      ticktick
     ]
     ++ (with pkgs-stable; [
       nerdfonts

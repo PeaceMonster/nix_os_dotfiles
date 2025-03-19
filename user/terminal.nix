@@ -86,13 +86,6 @@
     userEmail = "ugilt3@gmail.com";
   };
 
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = pkgs.lib.importTOML ./starship.toml;
-    enableTransience = true;
-  };
-
   programs.zsh = {
     enable = true;
   };
@@ -101,7 +94,14 @@
     enable = true;
   };
 
+
+  starship = {
+    enable = true;
+    fish.enable = true;
+  };
+
   imports = [
     ./fish.nix
+    ./starship/starship.nix
   ];
 }

@@ -162,8 +162,8 @@
     pamixer
     brightnessctl
     spotify
-    libsForQt5.kpmcore
-    partition-manager
+    kdePackages.kpmcore
+    kdePackages.partitionmanager
     openssl
     wine64
   ];
