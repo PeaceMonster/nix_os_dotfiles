@@ -9,7 +9,6 @@
     starship.fish.enable = lib.mkEnableOption "Enable fish integration";
     starship.bash.enable = lib.mkEnableOption "Enable bash integration";
     starship.zsh.enable = lib.mkEnableOption "Enable zsh integration";
-
   };
 
   config = {
