@@ -94,7 +94,6 @@
     enable = true;
   };
 
-
   starship = {
     enable = true;
     fish.enable = true;

@@ -20,6 +20,5 @@
         sddm.enable = true;
       };
     };
-
   };
 }

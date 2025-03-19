@@ -2,26 +2,23 @@
   pkgs,
   pkgs-stable,
   ...
-}: let
-  Rstudio-with-packages = pkgs-stable.rstudioWrapper.override {
-    packages = with pkgs.rPackages; [
-      # R packages
-      # stringi
-      # stringr
-    ];
-  };
-in {
+}: {
+  imports = [
+    ./rust.nix
+    ./r.nix
+  ];
+
+  languages.rust.enable = true;
+  languages.R.enable = true;
+
   home.packages = with pkgs; [
-    cargo
     gnat14
     lua
     nodejs_22
     ocaml
     opam
     python3
-    Rstudio-with-packages
     racket
-    rustc
     wasm-pack
     typescript
     typst
@@ -41,12 +38,10 @@ in {
     tinymist
     vscode-langservers-extracted
     zls
-    rust-analyzer
     texlab
     python312Packages.python-lsp-server
 
     # Formatters
-    rustfmt
     alejandra #nixfmt
     typstyle
 
