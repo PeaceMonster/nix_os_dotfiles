@@ -1,4 +1,0 @@
-[manager]
-prepend_keymap = [
-  { on = [ "g", "d" ], run = "cd ~/Hentet/", desc = "Go to downloads" },
-]
