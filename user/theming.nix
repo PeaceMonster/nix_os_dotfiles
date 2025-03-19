@@ -20,7 +20,6 @@ in {
     fish.enable = true;
     nixvim.enable = true;
     gtk.enable = true;
-
   };
 
   xdg.configFile."qtile/theme.yaml".source = base16;

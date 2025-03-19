@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.hyprland.enable = true;
 
   environment.systemPackages = [
@@ -8,5 +11,4 @@
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
 }

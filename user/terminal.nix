@@ -5,7 +5,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-
     #Emulator
     kitty
 
@@ -51,11 +50,6 @@
     comma # Temp programs
     rofi # Dmenu
 
-    #Spelling
-    hunspell
-    hunspellDicts.da_DK
-    hunspellDicts.en_US
-
     gnumake42
     cmake
     gdb
@@ -64,7 +58,7 @@
     fd # Better find
     yazi # Terminal File manager
     zoxide # z jump go brrr
-    tmsu
+    tmsu # Tagging system
     bat
     fzf
     wget
@@ -98,7 +92,6 @@
     settings = pkgs.lib.importTOML ./starship.toml;
     enableTransience = true;
   };
-
 
   programs.zsh = {
     enable = true;

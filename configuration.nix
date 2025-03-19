@@ -5,8 +5,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -40,7 +39,6 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.libinput.touchpad.disableWhileTyping = false;
-
 
   services.kanata = {
     enable = true;
@@ -145,14 +143,16 @@
     git
     (
       (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
-        epkgs: with epkgs; [
-          mu4e
-          (treesit-grammars.with-grammars (grammars: with grammars; [
-            tree-sitter-typst
-            tree-sitter-nix
-            tree
-          ]))
-        ]
+        epkgs:
+          with epkgs; [
+            mu4e
+            (treesit-grammars.with-grammars (grammars:
+              with grammars; [
+                tree-sitter-typst
+                tree-sitter-nix
+                tree
+              ]))
+          ]
       )
     )
     emacsPackages.treesit-grammars.with-all-grammars
@@ -165,16 +165,14 @@
     libsForQt5.kpmcore
     partition-manager
     openssl
+    wine64
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
-
-
 
   services.emacs = {
     enable = true;
     package = pkgs.emacs;
   };
-
 
   # programs.emacs = {
   #   defaultPkg = (
@@ -212,14 +210,12 @@
   };
 
   programs.nix-ld = {
-   enable = true;
-   libraries = with pkgs; [
-     pkg-config
-     openssl
-   ];
+    enable = true;
+    libraries = with pkgs; [
+      pkg-config
+      openssl
+    ];
   };
-
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -238,7 +234,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

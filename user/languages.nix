@@ -1,12 +1,16 @@
-{pkgs,pkgs-stable,...}:
-let
-  Rstudio-with-packages = pkgs-stable.rstudioWrapper.override{
-    packages = with pkgs.rPackages; [ # R packages
+{
+  pkgs,
+  pkgs-stable,
+  ...
+}: let
+  Rstudio-with-packages = pkgs-stable.rstudioWrapper.override {
+    packages = with pkgs.rPackages; [
+      # R packages
       # stringi
       # stringr
-  ];};
-in
-{
+    ];
+  };
+in {
   home.packages = with pkgs; [
     cargo
     gnat14
@@ -28,6 +32,9 @@ in
     clang-tools
     emmet-language-server
     go
+    godef
+    gotools
+    gopls
     jdt-language-server
     metals
     nixd

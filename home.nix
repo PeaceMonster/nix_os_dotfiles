@@ -21,63 +21,58 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
 
+  home.packages = with pkgs;
+    [
+      # Game Related
+      prismlauncher
+      ferium
+      discord
 
+      # Editor
+      neovide
+      libreoffice-qt6-fresh
+      obsidian
 
-  home.packages = with pkgs; [
+      #Browser
+      qutebrowser
+      brave
 
-    # Game Related
-    bottles
-    prismlauncher
-    ferium
-    discord
+      # Creation
+      freecad
+      gimp
+      inkscape
+      prusa-slicer # 3D print
 
-    # Editor
-    neovide
-    libreoffice-qt6-fresh
-    obsidian
+      #Media
+      mpv
+      pympress
+      pavucontrol
+      playerctl
+      spicetify-cli
+      blueman
+      zathura
+      qbittorrent
+      itch
 
-    #Browser
-    qutebrowser
-    brave
+      #Latex things
+      texliveFull
+      python312Packages.pygments
+      python312Packages.grip
 
-    # Creation
-    freecad
-    gimp
-    inkscape
-    prusa-slicer # 3D print
-
-    #Media
-    mpv
-    pympress
-    pavucontrol
-    playerctl
-    spicetify-cli
-    blueman
-    zathura
-    qbittorrent
-    itch
-
-
-    #Latex things
-    texliveFull
-    python312Packages.pygments
-    python312Packages.grip
-
-    #Utils
-    bitwarden-desktop
-    thunderbird
-    aerc
-    mu # emacs mail
-    isync
-    ledger
-    clockify # Time keeper for projects
-
-
-  ] ++ (with pkgs-stable ; [
-    nerdfonts
-  ]);
+      #Utils
+      bitwarden-desktop
+      thunderbird
+      aerc
+      mu # emacs mail
+      isync
+      ledger
+      clockify # Time keeper for projects
+    ]
+    ++ (with pkgs-stable; [
+      nerdfonts
+      bottles
+    ]);
   nixpkgs.config.allowUnfree = true;
-
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -87,6 +82,8 @@
 
   services.mpris-proxy.enable = true;
 
+  spellcheck.enable = true;
+
   programs.zathura.enable = true;
 
   # Let Home Manager install and manage itself.
@@ -95,6 +92,7 @@
   imports = [
     # ./user/neovim/neovim.nix
     ./user/terminal.nix
+    ./user/spellcheck.nix
     ./user/languages.nix
     ./user/defaults.nix
     ./user/neovim/neovim.nix

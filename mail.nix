@@ -1,9 +1,12 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   accounts.email = {
     maildirBasePath = ".mail";
-    accounts  = {
+    accounts = {
       uni = {
         primary = false;
         realName = "Mikkel Ugilt";

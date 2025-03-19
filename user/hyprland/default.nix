@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -10,12 +13,9 @@
       "kb_layout" = "dk";
       "kb_variant" = "nodeadkeys";
 
-
-
       monitor = [
         ", preferred, auto, 1"
       ];
-
     };
   };
   includes = [
