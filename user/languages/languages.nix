@@ -4,6 +4,8 @@
   ...
 }: {
   imports = [
+    ./zig.nix
+    ./c.nix
     ./go.nix
     ./java.nix
     ./nix.nix
@@ -12,34 +14,27 @@
     ./rust.nix
     ./typesetting.nix
     ./web.nix
+    ./python.nix
   ];
 
   languages = {
+    c.enable = true;
     R.enable = true;
     go.enable = true;
     java.enable = false;
     latex.enable = true;
     nix.enable = true;
     ocaml.enable = true;
+    python.enable = true;
     rust.enable = true;
     typst.enable = true;
     web.enable = true;
+    zig.enable = true;
   };
 
   home.packages = with pkgs; [
-    gnat14
     lua
-    python3
     racket
-    zig
-
-    # LSP
-    clang-tools
-    zls
-    python312Packages.python-lsp-server
-
-    # Formatters
-
     tree-sitter
   ];
 }
