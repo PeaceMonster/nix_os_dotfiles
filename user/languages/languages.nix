@@ -6,10 +6,15 @@
   imports = [
     ./rust.nix
     ./r.nix
+    ./nix.nix
   ];
 
-  languages.rust.enable = true;
-  languages.R.enable = true;
+  languages = {
+    rust.enable = true;
+    R.enable = true;
+    nix.enable = true;
+  };
+
 
   home.packages = with pkgs; [
     gnat14
@@ -34,7 +39,6 @@
     gopls
     jdt-language-server
     metals
-    nixd
     tinymist
     vscode-langservers-extracted
     zls
@@ -42,7 +46,6 @@
     python312Packages.python-lsp-server
 
     # Formatters
-    alejandra #nixfmt
     typstyle
 
     tree-sitter

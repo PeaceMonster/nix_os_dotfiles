@@ -93,7 +93,7 @@
     # ./user/neovim/neovim.nix
     ./user/terminal.nix
     ./user/spellcheck.nix
-    ./user/languages.nix
+    ./user/languages/languages.nix
     ./user/defaults.nix
     ./user/neovim/neovim.nix
     ./user/theming.nix
