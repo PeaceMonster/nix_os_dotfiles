@@ -81,6 +81,8 @@
 
   spellcheck.enable = true;
 
+
+
   programs.zathura.enable = true;
 
   # Let Home Manager install and manage itself.

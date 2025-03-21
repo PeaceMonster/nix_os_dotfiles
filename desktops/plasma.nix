@@ -4,7 +4,12 @@
   pkgs,
   ...
 }: {
-  config = {
+
+  options = {
+    desktops.plasma.enable = lib.mkEnableOption "Enable plasma DE";
+  };
+
+  config = lib.mkIf config.desktops.plasma.enable {
     # Enable the KDE Plasma Desktop Environment.
     services.desktopManager.plasma6.enable = true;
 

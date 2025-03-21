@@ -9,11 +9,16 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./desktops/qtile.nix
-    ./desktops/plasma.nix
-    ./desktops/fvwm.nix
-    # ./desktops/hyprland.nix
+    ./desktops/desktops.nix
   ];
+
+  desktops = {
+    hyprland.enable = false;
+    qtile.enable = true;
+  };
+
+
+
 
   # Bootloader.
   boot.loader = {

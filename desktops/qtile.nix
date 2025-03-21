@@ -4,6 +4,13 @@
   pkgs,
   ...
 }: {
+
+  options = {
+    desktops.qtile.enable = lib.mkEnableOption "Whether to enable or disable Qtile";
+  };
+
+  config = lib.mkIf config.desktops.qtile.enable{
+
   services.xserver.windowManager.qtile.enable = true;
   services.xserver.windowManager.qtile.extraPackages = python3Packages: with python3Packages; [pyyaml];
   nixpkgs.overlays = [
@@ -27,4 +34,5 @@
   ];
 
   services.displayManager.sessionPackages = [pkgs.qtile-unwrapped];
+  };
 }

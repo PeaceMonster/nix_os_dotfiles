@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-stable,
+  lib,
   ...
 }: {
   imports = [
@@ -18,18 +19,18 @@
   ];
 
   languages = {
-    c.enable = true;
-    R.enable = true;
-    go.enable = true;
-    java.enable = false;
-    latex.enable = true;
-    nix.enable = true;
-    ocaml.enable = true;
-    python.enable = true;
-    rust.enable = true;
-    typst.enable = true;
-    web.enable = true;
-    zig.enable = true;
+    c.enable = lib.mkDefault true;
+    R.enable = lib.mkDefault true;
+    go.enable = lib.mkDefault true;
+    java.enable = lib.mkDefault false;
+    latex.enable = lib.mkDefault true;
+    nix.enable = lib.mkDefault true;
+    ocaml.enable = lib.mkDefault true;
+    python.enable = lib.mkDefault true;
+    rust.enable = lib.mkDefault true;
+    typst.enable = lib.mkDefault true;
+    web.enable = lib.mkDefault true;
+    zig.enable = lib.mkDefault true;
   };
 
   home.packages = with pkgs; [
