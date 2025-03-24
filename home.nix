@@ -27,7 +27,6 @@
       prismlauncher
 
       # Editor
-      neovide
       libreoffice-qt6-fresh
       obsidian
 
@@ -70,7 +69,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "emacs";
     VISUAL = "emacs";
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };

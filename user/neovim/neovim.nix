@@ -1,8 +1,18 @@
-{pkgs, ...}: {
-  config = {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
+  options = {
+    neovim.nixvim.enable = lib.mkEnableOption "Configure Neovim with Nixvim";
+    neovim.neovide.enable = lib.mkEnableOption "Enable Neovide";
+    neovim.enable = lib.mkEnableOption "Enable Neovim";
+  };
+
+  config = lib.mkIf config.neovim.enable {
     programs.nixvim = {
-      enable = true;
-      # colorschemes.gruvbox.enable = true;
+      enable = config.neovim.nixvim.enable;
 
       extraConfigVim = ''
         set foldmethod=indent
@@ -80,6 +90,23 @@
         zig.enable = true;
       };
     };
+
+    home.packages = with pkgs;
+      []
+      ++ (
+        if config.neovim.neovide.enable
+        then [
+          neovide
+        ]
+        else []
+      )
+      ++ (
+        if config.neovim.enable && ! config.neovim.nix.enable
+        then [
+          neovim
+        ]
+        else []
+      );
 
     imports = [
       ./cmp.nix
