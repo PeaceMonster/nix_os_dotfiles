@@ -74,6 +74,11 @@
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };
 
+  neovim = {
+    enable = true;
+    nixvim.enable = true;
+  };
+
   services.mpris-proxy.enable = true;
 
   spellcheck.enable = true;

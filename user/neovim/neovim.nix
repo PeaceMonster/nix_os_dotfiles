@@ -101,18 +101,20 @@
         else []
       )
       ++ (
-        if config.neovim.enable && ! config.neovim.nix.enable
+        if (config.neovim.enable) && (!config.neovim.nixvim.enable)
         then [
           neovim
         ]
         else []
       );
 
-    imports = [
-      ./cmp.nix
-      ./keymaps.nix
-      ./conform.nix
-      ./lsp-config.nix
-    ];
+    neovim.nixvim.enable = lib.mkDefault false;
+    neovim.neovide.enable = lib.mkDefault false;
   };
+  imports = [
+    ./cmp.nix
+    ./keymaps.nix
+    ./conform.nix
+    ./lsp-config.nix
+  ];
 }
