@@ -25,8 +25,6 @@
     [
       # Game Related
       prismlauncher
-      ferium
-      discord
 
       # Editor
       neovide
@@ -80,8 +78,6 @@
   services.mpris-proxy.enable = true;
 
   spellcheck.enable = true;
-
-
 
   programs.zathura.enable = true;
 

@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-
   options = {
     desktops.plasma.enable = lib.mkEnableOption "Enable plasma DE";
   };

@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-
   options = {
     desktops.fvwm.enable = lib.mkEnableOption "Enable fvwm window manager";
   };
