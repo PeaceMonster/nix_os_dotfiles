@@ -122,11 +122,7 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      kdePackages.kate
-      #  thunderbird
-    ];
+    extraGroups = ["networkmanager" "wheel" "gamemode"];
   };
 
   # Install firefox.

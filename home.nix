@@ -61,10 +61,10 @@
       isync
       ledger
       ticktick
+      bottles
     ]
     ++ (with pkgs-stable; [
       nerdfonts
-      bottles
     ]);
   nixpkgs.config.allowUnfree = true;
 
