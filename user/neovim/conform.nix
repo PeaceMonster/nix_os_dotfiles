@@ -8,7 +8,7 @@
     settings = {
       format_on_save.lsp_format = "first";
       formatters_by_ft = {
-        nix = ["alejandra"];
+        nix = ["nixfmt"];
         typ = ["typstyle"];
       };
 

@@ -139,21 +139,6 @@
     vim
     wget
     git
-    (
-      (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
-        epkgs:
-          with epkgs; [
-            mu4e
-            (treesit-grammars.with-grammars (grammars:
-              with grammars; [
-                tree-sitter-typst
-                tree-sitter-nix
-                tree
-              ]))
-          ]
-      )
-    )
-    emacsPackages.treesit-grammars.with-all-grammars
     kanshi
     kanata
     wdisplays
@@ -166,21 +151,6 @@
     wine64
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
-
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacs;
-  };
-
-  # programs.emacs = {
-  #   defaultPkg = (
-  #     (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
-  #       epkgs: with epkgs; [
-  #         (treesit-grammars.with-grammars (grammars: with grammars; [ tree-sitter-gdscript ]))
-  #       ]
-  #     )
-  #   );
-  # };
 
   programs.bash = {
     interactiveShellInit = ''

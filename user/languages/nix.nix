@@ -11,7 +11,7 @@
   config = lib.mkIf config.languages.nix.enable {
     home.packages = with pkgs; [
       nixd
-      alejandra #nixfmt
+      nixfmt-rfc-style #nixfmt
     ];
   };
 }

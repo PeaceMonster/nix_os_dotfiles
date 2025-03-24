@@ -3,7 +3,8 @@
   pkgs,
   pkgs-stable,
   ...
-}: {
+}:
+{
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "ugilt";
@@ -21,7 +22,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
 
-  home.packages = with pkgs;
+  home.packages =
+    with pkgs;
     [
       # Game Related
       prismlauncher
@@ -78,6 +80,7 @@
     enable = true;
     nixvim.enable = true;
   };
+  emacs.enable = true;
 
   services.mpris-proxy.enable = true;
 
@@ -95,6 +98,7 @@
     ./user/languages/languages.nix
     ./user/defaults.nix
     ./user/neovim/neovim.nix
+    ./user/emacs.nix
     ./user/theming.nix
     ./user/yazi/yazi.nix
     ./mail.nix
