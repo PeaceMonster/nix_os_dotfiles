@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.nixvim.plugins.lsp.servers = {
     nixd.enable = true;
     rust_analyzer = {

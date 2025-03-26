@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     #Emulator
     kitty
@@ -33,10 +34,11 @@
     imagemagick
     pandoc
     graphviz
-    tectonic
+    #tectonic
     unzip
     zip
     pdftk
+    bashmount
 
     # Misc
     direnv
