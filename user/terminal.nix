@@ -34,7 +34,6 @@
     imagemagick
     pandoc
     graphviz
-    #tectonic
     unzip
     zip
     pdftk

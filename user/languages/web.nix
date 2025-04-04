@@ -14,6 +14,7 @@
       nodejs_22
       emmet-language-server
       vscode-langservers-extracted
+      eslint
     ];
   };
 }
