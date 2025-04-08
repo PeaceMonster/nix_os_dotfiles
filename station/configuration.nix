@@ -5,11 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../desktops/desktops.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../desktops/desktops.nix
+  ];
   desktops = {
     hyprland.enable = false;
     qtile.enable = true;
@@ -21,11 +21,12 @@
       enable = true;
       efiSupport = true;
       device = "nodev";
+      useOSProber = true;
     };
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "ugilt"; # Define your hostname.
+  networking.hostName = "station"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -90,6 +91,8 @@
     #media-session.enable = true;
   };
 
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
   services.kanata = {
     enable = true;
     keyboards.internalKeyboard = {
@@ -101,10 +104,13 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -133,7 +139,7 @@
     openssl
     wine64
   ];
-  services.dbus.packages = [pkgs.libsForQt5.kpmcore];
+  services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
 
   programs.bash = {
     interactiveShellInit = ''
@@ -178,6 +184,9 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
 }

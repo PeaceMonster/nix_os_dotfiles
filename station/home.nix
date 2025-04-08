@@ -56,6 +56,7 @@
 
       #Utils
       bitwarden-desktop
+      discord
       thunderbird
       aerc
       mu # emacs mail
