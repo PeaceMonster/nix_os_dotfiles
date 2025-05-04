@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
@@ -22,7 +23,7 @@
     git
     jujutsu
     rofi
-    tldr
+    tlrc
     bacon
     git
     rclone
@@ -50,6 +51,7 @@
     miniserve # Serve files
     comma # Temp programs
     rofi # Dmenu
+
 
     gnumake42
     cmake

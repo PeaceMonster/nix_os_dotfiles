@@ -23,6 +23,9 @@
 
     # Stylix
     stylix.url = "github:danth/stylix";
+
+    # Audiobook-dl
+    audiobook-dl.url = "github:jo1gi/audiobook-dl";
   };
 
   outputs = {
@@ -63,6 +66,7 @@
             inherit system;
             config.allowUnfree = true;
           };
+          inherit inputs;
         };
         modules = [
           inputs.nixvim.homeManagerModules.nixvim

@@ -48,6 +48,11 @@
       configFile = ./kanata.kbd;
     };
   };
+
+  environment.sessionVariables = {
+    NON_NIX = "$HOME/.dotfiles/non-nix/";
+  };
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -203,6 +208,20 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  networking.extraHosts = ''
+      10.42.7.43 abc.hkn
+      10.42.7.240 alfabet.hkn
+      10.42.7.165 babysessionforger.hkn
+      10.42.7.136 bcrypt.hkn
+      10.42.7.103 gateway.hkn
+      10.42.7.93 intranetmadness.hkn
+      10.42.7.106 realsessionforger.hkn
+      10.42.7.108 schnorr.hkn
+      10.42.7.142 secure-notes.hkn
+      10.42.7.109 under-construction.hkn
+      10.42.7.107 wizard-trial.hkn
+  '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
