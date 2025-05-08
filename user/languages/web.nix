@@ -15,6 +15,7 @@
       emmet-language-server
       vscode-langservers-extracted
       typescript-language-server
+      nodePackages_latest.prettier
     ];
   };
 }
