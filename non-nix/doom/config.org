@@ -1,0 +1,192 @@
+#+title: Config
+#+STARTUP: content
+
+* Doom config
+** Font
+Sætter fonten til at være FiraCode med size 16
+
+#+BEGIN_SRC elisp
+(setq doom-font
+      (font-spec
+       :family "JetBrainsMono Nerd Font"
+       :size 16
+       :weight 'regular)
+     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+#+END_SRC
+
+** UI
+For theme bruger jeg normalt
+#+begin_src elisp
+(setq doom-theme 'doom-gruvbox)
+#+end_src
+Men hvis der skal vises noget frem på projekter så bruger jeg =modus-operandi=
+
+#+BEGIN_SRC elisp
+(setq display-line-numbers-type `relative)
+#+END_SRC
+
+For evil kill not use system clipboard
+#+begin_src elisp
+(setq select-enable-clipboard nil)
+#+end_src
+
+** Org
+
+#+BEGIN_SRC elisp
+(setq org-directory "~/org/")
+(setq org-hide-emphasis-markers nil)
+(add-hook 'org-mode-hook #'auto-fill-mode)
+#+END_SRC
+
+*** Org-Mode Plugins
+
+#+begin_src elisp
+(after! org
+  (require 'ox-gfm))
+#+end_src
+
+
+**** Org Modern
+
+#+BEGIN_SRC elisp
+(after! org
+(add-hook 'org-mode-hook #'org-modern-mode))
+#+END_SRC
+**** Org Auto Tangle
+
+#+BEGIN_SRC elisp
+(after! org
+(add-hook 'org-mode-hook #'org-auto-tangle-mode))
+#+END_SRC
+
+*** Templates
+
+#+begin_src elisp
+(after! org
+  (require 'org-tempo)
+  (add-to-list 'org-structure-template-alist '("r" . "#+BEGIN_SRC rust")))
+#+end_src
+*** LaTeX
+Setting LaTeX to use minted for listings
+#+begin_src elisp
+(after! org
+  (setq org-latex-src-block-backend 'minted)
+  (add-to-list 'org-latex-packages-alist '("" "minted")))
+#+end_src
+** PDF
+
+#+begin_src elisp
+(after! org
+  (setq! org-latex-pdf-process
+       '("tectonic -X compile --outdir=%o -Z shell-escape -Z continue-on-errors %f")))
+#+end_src
+
+** Evil Lines
+#+begin_src emacs-lisp
+(use-package-hook! evil
+  :pre-init
+  (setq evil-respect-visual-line-mode t)
+  t)
+#+end_src
+** Language
+#+begin_src elisp
+(after! org (guess-language-mode))
+#+end_src
+* Typst
+
+Dette er ansvarlig for at registerer typst-lsp til lsp mode når lsp starter, så den kan køre typst lsp
+#+BEGIN_SRC elisp
+(after! lsp-mode
+  (add-to-list 'lsp-language-id-configuration '(typst-ts-mode . "tinymist"))
+  (lsp-register-client (make-lsp-client
+                :new-connection (lsp-stdio-connection "tinymist")
+                :major-modes '(typst-ts-mode)
+                :server-id 'typst-lsp)))
+
+(after! org (require 'ox-typst))
+(after! org (require 'org-typst-preview))
+#+END_SRC
+
+* Lua
+
+#+begin_src elisp
+
+(after! lsp-mode
+  (lsp-register-client (make-lsp-client
+                        :new-connection (lsp-stdio-connection "lua-language-server")
+                        :major-modes '(lua-mode)
+                        :server-id 'lua-language-server)))
+#+end_src
+
+
+
+* Move Text
+#+begin_src elisp
+(map!
+ :nv "M-k" #'move-text-up
+ :nv "M-j" #'move-text-down)
+#+end_src
+
+* ISpell
+#+begin_src elisp
+(after! ispell
+  (setenv "LANG" "da_DK.UTF-8")
+
+  (ispell-set-spellchecker-params)
+  (ispell-hunspell-add-multi-dic "da_DK,en_US")
+  )
+#+end_src
+
+* Ocaml
+
+* Mail
+
+#+begin_src elisp
+(after! mu4e
+  (setq sendmail-program (executable-find "msmtp")
+        send-mail-function #'message-send-mail-with-sendmail
+        message-sendmail-f-is-evil t
+        message-sendmail-extra-arguments '("--read-envelope-from")
+        message-send-mail-real-function #'message-send-mail-with-sendmail))
+#+end_src
+
+
+#+begin_src elisp
+(set-email-account! "uni"
+                    '((mu4e-sent-folder . "/uni/Sent")
+                      (mu4e-drafts-folder . "/uni/Drafts")
+                      (mu4e-trash-folder . "/uni/Trash")
+                      (mu4e-refile-folder . "uni/Inbox")
+                      (user-mail-address . "202106950@post.au.dk")
+                      (smtpmail-smtp-server . "post.au.dk")
+                      (smtpmail-smtp-service . 587)
+                      (smtpmail-servers-requiring-authorization . "smtp\\.post\\.au\\.dk"))
+                    t)
+#+end_src
+
+#+begin_src elisp
+(set-email-account! "gmail"
+                    '((mu4e-sent-folder . "/gmail/\[Gmail\]/Sendte\ mails")
+                      (mu4e-drafts-folder . "/gmail/\[Gmail\]/Udkast")
+                      (mu4e-trash-folder . "/gmail/\[Gmail\]/Papirkurv")
+                      (mu4e-refile-folder . "/gmail/Arkiv")
+                      (user-mail-address . "ugilt3@gmail.com")
+                      (smtpmail-smtp-server . "gmail.com"))
+                    t)
+#+end_src
+
+
+
+* Buffers
+
+#+begin_src elisp
+(evil-global-set-key 'normal "H" #'centaur-tabs-backward-tab)
+(evil-global-set-key 'normal "L" #'centaur-tabs-forward-tab)
+#+end_src
+
+
+* CalFw
+#+begin_src elisp
+(after! 'calfw-ical
+  (cfw:open-ical-calendar "https://calendar.google.com/calendar/u/0?cid=dWdpbHQzQGdtYWlsLmNvbQ"))
+#+end_src
