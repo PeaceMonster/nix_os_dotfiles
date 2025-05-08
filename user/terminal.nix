@@ -52,6 +52,7 @@
     comma # Temp programs
     rofi # Dmenu
 
+    poppler_utils
 
     gnumake42
     cmake
