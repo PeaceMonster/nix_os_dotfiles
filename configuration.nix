@@ -53,6 +53,9 @@
     NON_NIX = "$HOME/.dotfiles/non-nix/";
   };
 
+  virtualisation.docker.enable = true;
+
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -127,7 +130,7 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = ["networkmanager" "wheel" "gamemode"];
+    extraGroups = ["networkmanager" "wheel" "gamemode" "docker"];
   };
 
   # Install firefox.
