@@ -1,20 +1,68 @@
 (defsrc
-    caps s d f j k l
+    Backquote 1 2 3 4 5 6 7 8 9 0 Minus Equal
+    Tab q w e r t y u i o p BracketLeft BracketRight Backslash
+    caps a s d f g h j k l Semicolon Quote
+    IntlBackslash z x c v b n m , . Slash
+    Space
 )
 
 (defcfg process-unmapped-keys yes)
 
-(defalias cec (tap-hold 200 200 esc lctl))
+(defalias
+    cec (tap-hold 200 200 esc lctl)
+    fshift (tap-hold 200 200 f ShiftLeft)
+    jshift (tap-hold 200 200 j ShiftLeft)
+    dcontrol (tap-hold 200 200 d ControlLeft)
+    kcontrol (tap-hold 200 200 k ControlLeft)
+    ssuper (tap-hold 200 200 s MetaLeft)
+    lsuper (tap-hold 200 200 l MetaLeft)
+    aalt (tap-hold 200 200 a AltLeft)
+    aealt (tap-hold 200 200 Semicolon AltLeft)
+    qsymbols (tap-hold 200 200 q (layer-while-held symbols))
+    wnumpad (tap-hold 200 200 w (layer-switch numpad))
+    wnormal (layer-switch default)
+)
 
-(defalias fshift (tap-hold 200 200 f ShiftLeft))
-(defalias jshift (tap-hold 200 200 j ShiftLeft))
 
-(defalias dcontrol (tap-hold 200 200 d ControlLeft))
-(defalias kcontrol (tap-hold 200 200 k ControlLeft))
-
-(defalias ssuper (tap-hold 200 200 s MetaLeft))
-(defalias lsuper (tap-hold 200 200 l MetaLeft))
+(defalias
+    lp S-8
+    rp S-9
+    lc RA-7
+    rc RA-0
+    lb RA-8
+    rb RA-9
+    pc S-5
+    do RA-4
+    at RA-2
+)
 
 (deflayer default
-    @cec @ssuper @dcontrol @fshift @jshift @kcontrol @lsuper
+    Backquote 1 2 3 4 5 6 7 8 9 0 Minus Equal
+    Tab @qsymbols @wnumpad e r t y u i o p BracketLeft BracketRight Backslash
+    @cec @aalt @ssuper @dcontrol @fshift g h  @jshift @kcontrol @lsuper @aealt Quote
+    IntlBackslash z x c v b n m , . Slash
+    Space
+)
+
+(deflayer symbols
+    0 1 2 3 4 5 6 7 8 9 0 Minus Equal
+    Tab q w e r t y @lc @rc o p BracketLeft BracketRight Backslash
+    caps a s d f g @pc @lp @rp @at Semicolon Quote
+    IntlBackslash z x c v b @do @lb @rb . Slash
+    Space
+)
+(deflayermap (numpad)
+    w @wnormal
+    m 1
+    , 2
+    . 3
+    j 4
+    k 5
+    l 6
+    u 7
+    i 8
+    o 9
+    Space 0
+    caps @wnormal
+    _ XX
 )
