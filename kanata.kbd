@@ -19,27 +19,33 @@
     aalt (tap-hold 200 200 a AltLeft)
     aealt (tap-hold 200 200 Semicolon AltLeft)
     qsymbols (tap-hold 200 200 q (layer-while-held symbols))
+    psymbols (tap-hold 200 200 p (layer-while-held symbols))
     wnumpad (tap-hold 200 200 w (layer-switch numpad))
     wnormal (layer-switch default)
     earrow (tap-hold 200 200 e (layer-while-held hjklarrows))
+    gaming (tap-hold 200 200 Backquote (layer-switch gaming))
 )
 
 
 (defalias
-    lp S-8
-    rp S-9
-    lc RA-7
-    rc RA-0
-    lb RA-8
-    rb RA-9
-    pc S-5
-    do RA-4
-    at RA-2
+    lp S-8 ;;             (
+    rp S-9 ;;             )
+    lc RA-7 ;;            {
+    rc RA-0 ;;            }
+    lb RA-8 ;;            [
+    rb RA-9 ;;            ]
+    pc S-5 ;;             %
+    do RA-4    ;;         $
+    ca S-BracketRight ;;  ^
+    at RA-2 ;;            @
+    fs S-7 ;;             /
+    qs S-Minus ;;         ?
+    ti RA-BracketRight ;; ~
 )
 
 (deflayer default
-    Backquote 1 2 3 4 5 6 7 8 9 0 Minus Equal
-    Tab @qsymbols @wnumpad @earrow r t y u i o p BracketLeft BracketRight Backslash
+    @gaming 1 2 3 4 5 6 7 8 9 0 Minus Equal
+    Tab @qsymbols @wnumpad @earrow r t y u i o @psymbols BracketLeft BracketRight Backslash
     @cec @aalt @ssuper @dcontrol @fshift g h  @jshift @kcontrol @lsuper @aealt Quote
     IntlBackslash z x c v b n m , . Slash
     Space
@@ -48,8 +54,15 @@
 (deflayer symbols
     0 1 2 3 4 5 6 7 8 9 0 Minus Equal
     Tab q w e r t y @lc @rc o p BracketLeft BracketRight Backslash
-    caps a s d f g @pc @lp @rp @at Semicolon Quote
-    IntlBackslash z x c v b @do @lb @rb . Slash
+    caps a s @qs @fs g @pc @lp @rp @at @ti Quote
+    IntlBackslash z x c v @ca @do @lb @rb . Slash
+    Space
+)
+(deflayer gaming
+    @wnormal 1 2 3 4 5 6 7 8 9 0 Minus Equal
+    Tab q w e r t y u i o p BracketLeft BracketRight Backslash
+    caps a s d f g h j k l Semicolon Quote
+    IntlBackslash z x c v b n m , . Slash
     Space
 )
 (deflayermap (numpad)
