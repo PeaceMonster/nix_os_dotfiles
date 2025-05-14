@@ -41,6 +41,8 @@
     fs S-7 ;;             /
     qs S-Minus ;;         ?
     ti RA-BracketRight ;; ~
+    pi RA-Equal ;;        |
+    bs RA-IntlBackslash
 )
 
 (deflayer default
@@ -50,12 +52,11 @@
     IntlBackslash z x c v b n m , . Slash
     Space
 )
-
 (deflayer symbols
     0 1 2 3 4 5 6 7 8 9 0 Minus Equal
-    Tab q w e r t y @lc @rc o p BracketLeft BracketRight Backslash
+    Tab q w e r t y @lc @rc @pi p BracketLeft BracketRight Backslash
     caps a s @qs @fs g @pc @lp @rp @at @ti Quote
-    IntlBackslash z x c v @ca @do @lb @rb . Slash
+    @bs z x c v @ca @do @lb @rb . Slash
     Space
 )
 (deflayer gaming
