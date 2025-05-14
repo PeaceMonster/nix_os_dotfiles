@@ -20,9 +20,6 @@
         xkb.variant = "nodeadkeys";
       };
 
-      displayManager = {
-        sddm.enable = true;
-      };
     };
   };
 }

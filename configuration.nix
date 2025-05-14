@@ -88,7 +88,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.xserver = {
     desktopManager.xfce.enable = true;
@@ -130,13 +130,14 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = ["networkmanager" "wheel" "gamemode" "docker"];
+    extraGroups = ["networkmanager" "wheel" "gamemode" "docker" "adbusers"];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
   programs.gamemode.enable = true;
   programs.steam.enable = true;
+  programs.adb.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -157,6 +158,7 @@
     kdePackages.partitionmanager
     openssl
     wine64
+    distrobox
   ];
   services.dbus.packages = [pkgs.libsForQt5.kpmcore];
 
