@@ -99,6 +99,10 @@
       configFile = ../kanata.kbd;
     };
   };
+
+  environment.sessionVariables = {
+    NON_NIX = "$HOME/.dotfiles/non-nix/";
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

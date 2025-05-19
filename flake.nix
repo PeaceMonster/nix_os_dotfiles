@@ -78,7 +78,7 @@
         };
         modules = [
           inputs.nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           ./home.nix
         ];
       };
@@ -92,7 +92,7 @@
         };
         modules = [
           inputs.nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           ./station/home.nix
         ];
       };
@@ -106,7 +106,7 @@
         };
         modules = [
           inputs.nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           ./beast/home.nix
         ];
       };
