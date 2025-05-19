@@ -70,6 +70,7 @@
     w @wnormal
     s MetaLeft
     f ShiftLeft
+    a (layer-while-held fnpad)
     m 1
     , 2
     . 3
@@ -83,6 +84,17 @@
     p ,
     Quote .
     caps @wnormal
+)
+(deflayermap (fnpad)
+    m F1
+    , F2
+    . F3
+    j F4
+    k F5
+    l F6
+    u F7
+    i F8
+    o F9
 )
 (deflayermap (hjklarrows)
   h ArrowLeft

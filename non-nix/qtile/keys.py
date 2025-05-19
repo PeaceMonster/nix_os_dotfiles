@@ -138,7 +138,7 @@ keys.extend(
     [
         Key([mod], "F8", lazy.group["sp"].dropdown_toggle("bluetooth")),
         Key([mod], "F9", lazy.group["sp"].dropdown_toggle("spotify")),
-        Key([mod], "F10", lazy.group["sp"].dropdown_toggle("bitwarden")),
+        Key([mod], "F3", lazy.group["sp"].dropdown_toggle("bitwarden")),
         Key([mod], "F1", lazy.group["sp"].dropdown_toggle("scratch-vim")),
         Key([mod], "F2", lazy.group["sp"].dropdown_toggle("scratch-term")),
     ]

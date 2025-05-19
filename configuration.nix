@@ -107,6 +107,17 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.syncthing = {
+    enable = true;
+    dataDir = "/home/ugilt/syncthing";
+    openDefaultPorts = true;
+    configDir = "/home/ugilt/.config/syncthing";
+    user = "ugilt";
+    group = "users";
+    guiAddress = "127.0.0.1:8384";
+  };
+
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
