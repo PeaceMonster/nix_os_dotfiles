@@ -22,7 +22,7 @@
     asus-wmi-screenpad.inputs.nixpkgs.follows = "nixpkgs";
 
     # Stylix
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix/release-24.11";
 
     # Audiobook-dl
     audiobook-dl.url = "github:jo1gi/audiobook-dl";
