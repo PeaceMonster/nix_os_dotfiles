@@ -4,3 +4,6 @@ home:
 
 os:
     nh os switch .
+
+osb:
+    nh os switch .#beast

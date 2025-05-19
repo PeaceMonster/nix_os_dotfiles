@@ -57,6 +57,14 @@
           nix-index-database.nixosModules.nix-index
         ];
       };
+      beast = lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./beast/configuration.nix
+          nix-index-database.nixosModules.nix-index
+        ];
+      };
     };
     homeConfigurations = {
       ugilt = home-manager.lib.homeManagerConfiguration {
@@ -86,6 +94,20 @@
           inputs.nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
           ./station/home.nix
+        ];
+      };
+      beast = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        };
+        modules = [
+          inputs.nixvim.homeManagerModules.nixvim
+          stylix.homeManagerModules.stylix
+          ./beast/home.nix
         ];
       };
     };
