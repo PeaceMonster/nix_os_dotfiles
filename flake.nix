@@ -106,7 +106,7 @@
         };
         modules = [
           inputs.nixvim.homeManagerModules.nixvim
-          stylix.homeModules.stylix
+          stylix.homeManagerModules.stylix
           ./beast/home.nix
         ];
       };
