@@ -5,11 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../desktops/desktops.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../desktops/desktops.nix
+  ];
 
   desktops = {
     hyprland.enable = false;
@@ -99,6 +99,7 @@
       configFile = ../kanata.kbd;
     };
   };
+  virtualisation.docker.enable = true;
 
   environment.sessionVariables = {
     NON_NIX = "$HOME/.dotfiles/non-nix/";
@@ -110,10 +111,16 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = ["networkmanager" "wheel" "gamemode" "docker" "adbusers"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "gamemode"
+      "docker"
+      "adbusers"
+    ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -189,5 +196,8 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
