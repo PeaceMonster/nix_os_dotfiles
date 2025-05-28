@@ -34,8 +34,28 @@ in {
   swapDevices = [
     {device = "/dev/disk/by-uuid/b0cffb24-ad69-4381-b92f-1c1e280378d5";}
   ];
-  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    modesetting.enable = true;
+
+    powerManagement.enable = false;
+
+    open = true;
+
+    nvidiaSettings = true;
+
+    prime = {
+      sync.enable = true;
+
+
+
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
+
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
