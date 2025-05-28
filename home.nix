@@ -64,6 +64,10 @@
       ledger
       ticktick
       bottles
+
+      legendary-gl
+      rare
+
     ]
     ++ (with pkgs-stable; [
       nerdfonts
