@@ -36,11 +36,6 @@
   (setq! org-latex-pdf-process
        '("tectonic -X compile --outdir=%o -Z shell-escape -Z continue-on-errors %f")))
 
-(use-package-hook! evil
-  :pre-init
-  (setq evil-respect-visual-line-mode t)
-  t)
-
 (after! org (guess-language-mode))
 
 (after! lsp-mode

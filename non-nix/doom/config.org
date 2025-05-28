@@ -82,12 +82,10 @@ Setting LaTeX to use minted for listings
 #+end_src
 
 ** Evil Lines
-#+begin_src emacs-lisp
 (use-package-hook! evil
   :pre-init
   (setq evil-respect-visual-line-mode t)
   t)
-#+end_src
 ** Language
 #+begin_src elisp
 (after! org (guess-language-mode))
