@@ -11,8 +11,8 @@
     ./hyprland.nix
   ];
 
-  desktops.qtile.enable = lib.mkDefault true;
-  desktops.plasma.enable = lib.mkDefault true;
-  desktops.fvwm.enable = lib.mkDefault true;
-  desktops.hyprland.enable = lib.mkDefault true;
+  desktops.qtile.enable = lib.mkDefault false;
+  desktops.plasma.enable = lib.mkDefault false;
+  desktops.fvwm.enable = lib.mkDefault false;
+  desktops.hyprland.enable = lib.mkDefault false;
 }
