@@ -34,6 +34,14 @@ in {
   swapDevices = [
     {device = "/dev/disk/by-uuid/b0cffb24-ad69-4381-b92f-1c1e280378d5";}
   ];
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vpl-gpu-rt
+    ];
+  };
+
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
