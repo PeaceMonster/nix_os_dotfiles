@@ -22,7 +22,7 @@ For theme bruger jeg normalt
 Men hvis der skal vises noget frem på projekter så bruger jeg =modus-operandi=
 
 #+BEGIN_SRC elisp
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type `visual)
 #+END_SRC
 
 For evil kill not use system clipboard

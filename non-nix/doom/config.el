@@ -7,7 +7,7 @@
 
 (setq doom-theme 'doom-gruvbox)
 
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type `visual)
 
 (setq select-enable-clipboard nil)
 
