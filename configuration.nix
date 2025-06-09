@@ -17,6 +17,7 @@
     hyprland.enable = false;
     qtile.enable = true;
     plasma.enable = true;
+    niri.enable = true;
   };
 
   # Bootloader.
