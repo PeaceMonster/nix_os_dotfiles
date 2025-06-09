@@ -43,7 +43,12 @@
     nixosConfigurations = {
       ugilt = lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs;};
         modules = [
           ./configuration.nix
           nix-index-database.nixosModules.nix-index
