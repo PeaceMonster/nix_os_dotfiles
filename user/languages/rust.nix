@@ -16,6 +16,7 @@
       rustfmt
       rustc
       clippy
+      bacon
     ];
   };
 }

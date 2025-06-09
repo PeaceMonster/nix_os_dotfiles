@@ -24,8 +24,8 @@
     jujutsu
     rofi
     tlrc
-    bacon
     git
+    htop
     rclone
     peaclock
     percollate # Tool for turning webpages into pdms
