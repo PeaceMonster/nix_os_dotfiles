@@ -16,6 +16,7 @@
   desktops = {
     hyprland.enable = false;
     qtile.enable = true;
+    plasma.enable = true;
   };
 
   # Bootloader.
