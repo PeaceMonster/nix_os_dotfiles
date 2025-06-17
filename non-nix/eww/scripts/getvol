@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+
+mute=$(pamixer --get-mute)
+value=$(pamixer --get-volume)
+
+jq -rn --arg mute $mute --arg value $value '{mute: $mute, value: $value}'

@@ -1,0 +1,119 @@
+(defwidget bar [display]
+  (centerbox :orientation "h"
+    (workspaces :display display)
+    (music)
+    (sidestuff)))
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (volume)
+    (battery)
+    time
+    ( powermenu )
+    ))
+
+(defwidget workspaces [display]
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+    (for space in
+         {jq(niri_workspaces, "[.[] | if (.output==\"${display}\") then . else empty end]|sort_by(.idx)")}
+         (button
+          :onclick "niri msg action focus-workspace ${space.idx}"
+          :class {"workspace" + (space.is_active ? " active" : "")}
+          {space.is_active ? "" : ""}))))
+
+(defwidget powermenu []
+  (box
+  (button :class "power"
+       :orientation "h"
+       :space-evenly false
+       :onclick "~/.config/rofi/powermenu/type-5/powermenu.sh"
+       "⏻"))
+
+  )
+
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    {music != "" ? "🎵${music}" : ""}))
+
+(defwidget battery []
+  (box :orientation "h"
+       :class {"metric " + ( battery.capacity < 25 ? "low" : battery.capacity < 60 ? "middle" : "high" ) }
+       :space-evenly false
+       (box :class "label" {( battery.status == "charging" ? "󰂄" : "󰁹" ) + (battery.plugged == "no" ? "" : "") })
+       (scale :min 0
+              :max 101
+              :active false
+              :value {battery.capacity})))
+
+(defwidget volume []
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "vol_label" {volume.mute ? "" : ""})
+    (scale :min 0
+           :max 101
+           :active true
+           :value {volume.value}
+           :onchange "amixer -D pulse sset Master {}%" )))
+
+(defwidget metric [label value onchange]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+           :max 101
+           :active {onchange != ""}
+           :value value
+           :onchange onchange)))
+
+
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll battery :interval "1s"
+         "scripts/getbat.sh")
+
+(defpoll niri_workspaces :interval "1s"
+         "niri msg -j workspaces")
+
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :stacking "overlay"
+  :exclusive true
+  (bar :display "eDP-1"))
+
+(defwindow bar2
+  :monitor 1
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "4%")
+  :stacking "overlay"
+  :exclusive true
+  (bar :display "DP-1"))
