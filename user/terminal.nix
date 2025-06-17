@@ -22,7 +22,7 @@
     vim
     git
     jujutsu
-    rofi
+    rofi-wayland
     tlrc
     git
     htop
@@ -50,7 +50,6 @@
     just
     miniserve # Serve files
     comma # Temp programs
-    rofi # Dmenu
 
     poppler_utils
 

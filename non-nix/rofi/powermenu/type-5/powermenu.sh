@@ -19,14 +19,14 @@ uptime="$(uptime -p | sed -e 's/up //g')"
 host=$(hostname)
 
 # Options
-hibernate=''
-shutdown=''
-reboot=''
-lock=''
+hibernate='󰤄'
+shutdown=''
+reboot='󰜉'
+lock=''
 suspend=''
-logout=''
-yes=''
-no=''
+logout='󰍃'
+yes='󰄬'
+no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -82,6 +82,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif [[ "$DESKTOP_SESSION" == 'niri' ]]; then
+				niri msg action quit -s
 			fi
 		fi
 	else
@@ -106,6 +108,8 @@ $lock)
 		betterlockscreen -l
 	elif [[ -x '/usr/bin/i3lock' ]]; then
 		i3lock
+	elif [[ -x '/usr/bin/env swaylock' ]]; then
+		swaylock
 	fi
 	;;
 $suspend)

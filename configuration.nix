@@ -144,7 +144,7 @@
   users.users.ugilt = {
     isNormalUser = true;
     description = "Mikkel Ugilt";
-    extraGroups = ["networkmanager" "wheel" "gamemode" "docker" "adbusers"];
+    extraGroups = ["networkmanager" "wheel" "gamemode" "docker" "adbusers" "input"];
   };
 
   # Install firefox.

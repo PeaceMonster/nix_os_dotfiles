@@ -11,7 +11,7 @@
   config = lib.mkIf config.emacs.enable {
     home.packages = with pkgs; [
       (
-        (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (
+        (pkgs.emacsPackagesFor pkgs.emacs-pgtk).emacsWithPackages (
           epkgs:
             with epkgs; [
               mu4e
