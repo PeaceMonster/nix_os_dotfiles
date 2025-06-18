@@ -149,7 +149,16 @@
     kdePackages.partitionmanager
     openssl
     wine64
+    jadx
   ];
+
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16*1024;
+    }
+  ];
+
   services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
 
   programs.bash = {
@@ -187,7 +196,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
