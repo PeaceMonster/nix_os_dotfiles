@@ -12,8 +12,9 @@
   ];
 
   desktops = {
-    hyprland.enable = false;
     qtile.enable = true;
+    niri.enable = true;
+    plasma.enable = true;
   };
   # Bootloader.
   boot.loader = {
@@ -169,6 +170,16 @@
         exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
       fi
     '';
+  };
+
+  services.syncthing = {
+    enable = true;
+    dataDir = "/home/ugilt/syncthing";
+    openDefaultPorts = true;
+    configDir = "/home/ugilt/.config/syncthing";
+    user = "ugilt";
+    group = "users";
+    guiAddress = "127.0.0.1:8384";
   };
 
   programs.nix-ld = {
