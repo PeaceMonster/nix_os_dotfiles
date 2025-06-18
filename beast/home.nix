@@ -78,7 +78,7 @@
 
   neovim = {
     enable = true;
-    nixvim.enable = true;
+    nixvim.enable = false;
   };
   emacs.enable = true;
 
