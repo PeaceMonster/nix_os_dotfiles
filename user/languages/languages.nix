@@ -17,6 +17,7 @@
     ./typesetting.nix
     ./web.nix
     ./python.nix
+	./lua.nix
   ];
 
   languages = {
@@ -33,6 +34,7 @@
     tectonic.enable = lib.mkDefault true;
     web.enable = lib.mkDefault true;
     zig.enable = lib.mkDefault true;
+	lua.enable = lib.mkDefault true;
   };
 
   home.packages = with pkgs; [

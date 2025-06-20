@@ -13,7 +13,7 @@
       go
       godef
       gotools
-      gopls
+      # gopls
     ];
   };
 }
