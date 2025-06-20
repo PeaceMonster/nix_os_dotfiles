@@ -150,7 +150,6 @@
     kdePackages.partitionmanager
     openssl
     wine64
-    jadx
   ];
 
   swapDevices = [
