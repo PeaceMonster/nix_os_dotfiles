@@ -1,9 +1,9 @@
 (setq doom-font
       (font-spec
        :family "JetBrainsMono Nerd Font"
-       :size 16
+       :size 20
        :weight 'regular)
-     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 20))
 
 (setq doom-theme 'doom-gruvbox)
 

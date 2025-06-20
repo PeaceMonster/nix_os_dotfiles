@@ -9,9 +9,9 @@ Sætter fonten til at være FiraCode med size 16
 (setq doom-font
       (font-spec
        :family "JetBrainsMono Nerd Font"
-       :size 16
+       :size 20
        :weight 'regular)
-     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+     doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 20))
 #+END_SRC
 
 ** UI
