@@ -38,7 +38,6 @@
   };
 
   home.packages = with pkgs; [
-    lua
     racket
     tree-sitter
   ];
