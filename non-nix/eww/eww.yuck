@@ -103,7 +103,7 @@
                       :anchor "top center")
   :stacking "overlay"
   :exclusive true
-  (bar :display "eDP-1"))
+  (bar :display "eDP-2"))
 
 (defwindow bar2
   :monitor 1
