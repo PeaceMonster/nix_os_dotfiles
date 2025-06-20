@@ -81,7 +81,7 @@
         typst-vim.enable = true;
         vim-css-color.enable = true;
         which-key.enable = true;
-        web-devicons.enable = true;
+        web-devicons.enable = false;
         yazi = {
           enable = true;
           settings.use_ya_for_events_reading = true;
