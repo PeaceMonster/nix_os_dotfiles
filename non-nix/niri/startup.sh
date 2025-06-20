@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-swaybg -m center -i ~/.dotfiles/user/images/da-one-sea.jpeg &
+swaybg -m fill -i ~/.dotfiles/user/images/da-one-sea.jpeg &
