@@ -322,6 +322,8 @@ window-rule {
     clip-to-geometry true
 }
 
+
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -329,6 +331,7 @@ hotkey-overlay {
 environment {
     DISPLAY ":0"
     DESKTOP_SESSION "niri"
+	ELECTRON_OZONE_PLATFORM_HINT "wayland"
 }
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "eww" "open" "bar"

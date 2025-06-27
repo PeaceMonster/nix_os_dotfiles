@@ -20,7 +20,7 @@
       swaylock
       swaybg
       waybar
-      #xdg-desktop-portal-gtk
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
       xdg-desktop-portal-wlr
       eww
