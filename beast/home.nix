@@ -52,6 +52,8 @@
       qbittorrent
       itch
 
+	  godot
+
       #Latex things
 
       #Utils
@@ -88,7 +90,7 @@
 
   programs.zathura.enable = true;
 
-  languages.java.enable = true;
+  languages.java.enable = false;
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
