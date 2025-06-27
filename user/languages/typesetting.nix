@@ -10,6 +10,7 @@
     languages.typst.enable = lib.mkEnableOption "Enable typst";
     languages.latex.enable = lib.mkEnableOption "Enable latex";
     languages.tectonic.enable = lib.mkEnableOption "Enable latex";
+	languages.markdown.enable = lib.mkEnableOption "Enable markdown";
   };
 
   config = {
@@ -45,6 +46,14 @@
           ]
         else
           [ ]
-      );
+      )
+	  ++ (
+		if config.languages.markdown.enable then
+		  [
+			markdown-oxide
+		  ]
+		else
+		  [ ]
+	  );
   };
 }

@@ -26,6 +26,7 @@
     go.enable = lib.mkDefault true;
     java.enable = lib.mkDefault false;
     latex.enable = lib.mkDefault true;
+	markdown.enable = lib.mkDefault true;
     nix.enable = lib.mkDefault true;
     ocaml.enable = lib.mkDefault true;
     python.enable = lib.mkDefault true;
