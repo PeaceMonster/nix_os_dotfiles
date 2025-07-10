@@ -20,7 +20,7 @@
     aealt (tap-hold 200 200 Semicolon AltLeft)
     qsymbols (tap-hold 200 200 q (layer-while-held symbols))
     psymbols (tap-hold 200 200 p (layer-while-held symbols))
-    wnumpad (tap-hold 200 200 w (layer-switch numpad))
+    wnumpad (tap-hold 200 200 w (layer-while-held numpad))
     wnormal (layer-switch default)
     earrow (tap-hold 200 200 e (layer-while-held hjklarrows))
     gaming (tap-hold 200 200 Backquote (layer-switch gaming))
@@ -67,7 +67,6 @@
     Space
 )
 (deflayermap (numpad)
-    w @wnormal
     s MetaLeft
     f ShiftLeft
     a (layer-while-held fnpad)
