@@ -298,6 +298,7 @@ window-rule {
 
 window-rule {
     match app-id="emacs"
+    match app-id="brave-browser"
     open-maximized true
 }
 
