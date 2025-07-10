@@ -20,7 +20,7 @@
     niri.enable = true;
   };
 
-  # Bootloader.
+
   boot.loader = {
     grub = {
       enable = true;
