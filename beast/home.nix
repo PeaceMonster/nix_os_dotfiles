@@ -73,8 +73,8 @@
   nixpkgs.config.allowUnfree = true;
 
   home.sessionVariables = {
-    EDITOR = "emacs";
-    VISUAL = "emacs";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
     XKB_DEFAULT_OPTIONS = "caps:escape";
   };
 
