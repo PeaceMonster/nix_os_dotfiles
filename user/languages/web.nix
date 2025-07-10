@@ -16,6 +16,7 @@
       vscode-langservers-extracted
       typescript-language-server
       nodePackages_latest.prettier
+	  svelte-language-server
     ];
   };
 }

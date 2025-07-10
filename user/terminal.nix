@@ -60,6 +60,7 @@
     file # Info about file
     fd # Better find
     yazi # Terminal File manager
+	broot # Why only one fm
     zoxide # z jump go brrr
     tmsu # Tagging system
     bat
