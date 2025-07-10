@@ -17,10 +17,6 @@
     # Nixvim
     nixvim.url = "github:nix-community/nixvim";
 
-    # Duo screenpad hack
-    asus-wmi-screenpad.url = "github:MatthewCash/asus-wmi-screenpad-module";
-    asus-wmi-screenpad.inputs.nixpkgs.follows = "nixpkgs";
-
     # Stylix
     stylix.url = "github:nix-community/stylix/release-24.11";
 
