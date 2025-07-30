@@ -1,9 +1,9 @@
 
 home:
-    nh home switch . -c "beast"
+    nh home switch . 
 
 os:
-    nh os switch .#beast
+    nh os switch .
 
 osb:
     nh os switch .#beast

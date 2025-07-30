@@ -24,6 +24,7 @@
       xdg-desktop-portal-gnome
       xdg-desktop-portal-wlr
       eww
+	  nautilus
     ];
 
   };
