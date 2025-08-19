@@ -11,6 +11,7 @@
     ./go.nix
     ./java.nix
     ./nix.nix
+	./elm.nix
     ./ocaml.nix
     ./r.nix
     ./rust.nix
@@ -23,6 +24,7 @@
   languages = {
     c.enable = lib.mkDefault true;
     R.enable = lib.mkDefault true;
+	elm.enable = lib.mkDefault true;
     go.enable = lib.mkDefault true;
     java.enable = lib.mkDefault false;
     latex.enable = lib.mkDefault true;

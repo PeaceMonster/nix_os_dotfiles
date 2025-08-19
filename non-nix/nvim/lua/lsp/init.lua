@@ -5,6 +5,7 @@ local servers = {
 	"cssls",
 	"emmet_language_server",
 	"eslint",
+	"elmls",
 	"gopls",
 	"html",
 	"jsonls",
