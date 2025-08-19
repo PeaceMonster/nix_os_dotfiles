@@ -10,6 +10,9 @@
     #Emulator
     kitty
 
+	# Spreadsheet cli
+	visidata
+
     # Terminals
     fish
     zsh
@@ -29,6 +32,7 @@
     rclone
     peaclock
     percollate # Tool for turning webpages into pdms
+	bitwarden-cli
 
     # File manipulation
     ffmpeg
