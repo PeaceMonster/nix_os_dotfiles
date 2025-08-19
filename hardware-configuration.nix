@@ -33,6 +33,22 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp194s0.useDHCP = lib.mkDefault true;
 
+  hardware.opengl.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+	package = config.boot.kernelPackages.nvidiaPackages.stable;
+	modesetting.enable = true;
+	nvidiaSettings = true;
+	open = true;
+	prime = {
+	  amdgpuBusId = "PCI:197:0:0";
+	  nvidiaBusId = "PCI:195:0:0";
+	  sync.enable = true;
+	};
+  };
+
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

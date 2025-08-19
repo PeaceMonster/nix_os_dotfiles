@@ -63,7 +63,6 @@
       isync
       ledger
       ticktick
-      bottles
 
       legendary-gl
       rare
@@ -71,6 +70,7 @@
     ]
     ++ (with pkgs-stable; [
       nerdfonts
+      bottles
     ]);
   nixpkgs.config.allowUnfree = true;
 

@@ -118,6 +118,11 @@
       configFile = ./kanata.kbd;
     };
   };
+
+  # Razer support
+  hardware.openrazer.enable = true;
+
+
   virtualisation.docker.enable = true;
 
   environment.sessionVariables = {
@@ -137,6 +142,7 @@
       "gamemode"
       "docker"
       "adbusers"
+	  "openrazer"
     ];
     packages = with pkgs; [
     ];
@@ -167,6 +173,8 @@
     openssl
     wine64
 	polkit_gnome
+	openrazer-daemon
+	polychromatic
   ];
 
   services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
