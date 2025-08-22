@@ -85,7 +85,7 @@
   services.xserver.xkb = {
     layout = "dk";
     variant = "nodeadkeys";
-    options = "caps:escape";
+    options = "caps:escape,compose:menu";
   };
 
   # Configure console keymap

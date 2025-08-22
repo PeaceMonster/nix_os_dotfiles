@@ -77,7 +77,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
-    XKB_DEFAULT_OPTIONS = "caps:escape";
+    XKB_DEFAULT_OPTIONS = "caps:escape,compose:menu";
   };
 
   neovim = {

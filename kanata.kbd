@@ -3,7 +3,7 @@
     Tab q w e r t y u i o p BracketLeft BracketRight Backslash
     caps a s d f g h j k l Semicolon Quote
     IntlBackslash z x c v b n m , . Slash
-    Space
+    Space 
 )
 
 (defcfg process-unmapped-keys yes)
@@ -57,7 +57,7 @@
     Tab q w e r t y @lc @rc @pi p BracketLeft BracketRight Backslash
     caps a s @qs @fs g @pc @lp @rp @at @ti Quote
     @bs z x c v @ca @do @lb @rb . Slash
-    Space
+    Space 
 )
 (deflayer gaming
     @wnormal 1 2 3 4 5 6 7 8 9 0 Minus Equal

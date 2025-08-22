@@ -8,6 +8,7 @@
   imports = [
     ./zig.nix
     ./c.nix
+    ./gleam.nix
     ./go.nix
     ./java.nix
     ./nix.nix
@@ -25,6 +26,7 @@
     c.enable = lib.mkDefault true;
     R.enable = lib.mkDefault true;
 	elm.enable = lib.mkDefault true;
+	gleam.enable = lib.mkDefault true;
     go.enable = lib.mkDefault true;
     java.enable = lib.mkDefault false;
     latex.enable = lib.mkDefault true;
