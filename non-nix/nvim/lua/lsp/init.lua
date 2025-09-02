@@ -6,6 +6,7 @@ local servers = {
 	"emmet_language_server",
 	"eslint",
 	"elmls",
+	"gleam",
 	"gopls",
 	"html",
 	"jsonls",
@@ -15,6 +16,7 @@ local servers = {
 	"pylsp",
 	"rust_analyzer",
 	"svelte",
+	"tinymist",
 	"ts_ls",
 	"zls",
 }

@@ -123,7 +123,7 @@ local leader_binds = {
 	leader = "<leader>",
 	desc = "Main leader binds",
 	binds = {
-		{ "n", ".", ":Ex<CR>", opts = { desc = "Open netrw"}},
+		{ "n", ".", ":Ex<CR>", opts = { desc = "Open netrw" } },
 		file_binds,
 		git_binds,
 		buffer_binds,
@@ -135,6 +135,8 @@ local leader_binds = {
 }
 
 bindGroup("", leader_binds)
+
+vim.keymap.set("t", "<C-n>", "<C-\\><C-n>")
 
 --- Buffer navigation
 normalmap({ "H", ":bp<CR>" })

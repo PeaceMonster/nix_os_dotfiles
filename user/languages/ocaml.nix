@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   options = {
     languages.ocaml.enable = lib.mkEnableOption "Enable ocaml lang and tools";
   };
@@ -12,6 +13,14 @@
     home.packages = with pkgs; [
       ocaml
       opam
+      ocamlPackages.ocaml-lsp
+      ocamlPackages.merlin
+      ocamlPackages.findlib
+      ocamlPackages.utop
+      ocamlPackages.ocp-indent
+      ocamlPackages.ocamlformat
+      ocamlPackages.menhir
+
     ];
   };
 }
