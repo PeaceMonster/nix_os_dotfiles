@@ -13,6 +13,7 @@
     home.packages = with pkgs; [
       ocaml
       opam
+      dune_3
       ocamlPackages.ocaml-lsp
       ocamlPackages.merlin
       ocamlPackages.findlib

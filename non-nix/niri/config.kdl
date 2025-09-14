@@ -26,7 +26,10 @@ input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     touchpad {
-        // off
+
+
+        // LINE TO TOGGLE
+        //off
         tap
         // dwt
         // dwtp
