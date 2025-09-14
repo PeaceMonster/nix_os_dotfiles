@@ -3,49 +3,33 @@
 
 ;; To install a package with Doom you must declare them here and run 'doom sync'
 ;; on the command line, then restart Emacs for the changes to take effect -- or
-;; use 'M-x doom/reload'.
 
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
-(package! treesit-auto)
+(package! org-modern)
 
-(package! justl)
+
+
+;; (package! typst-ts-mode
+;;   :recipe (:type git :host sourcehut :repo "meow_king/typst-ts-mode" :files ("*.el")))
+
+(package! typst-ts-mode
+  :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
+
+(package! gleam-ts-mode
+  :recipe (:host github
+           :repo "gleam-lang/gleam-mode"
+           :branch "main"
+           :files ("gleam-ts-*.el")))
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/radian-software/straight.el#the-recipe-format
 ;; (package! another-package
 ;;   :recipe (:host github :repo "username/repo"))
 
-(package! typst-ts-mode
-  :recipe (:host codeberg :repo "meow_king/typst-ts-mode"))
-
-(after! lsp
-  (lsp-register-client (make-lsp-client
-                        :new-connection (lsp-stdio-connection "typst-lsp")
-                        :major-modes '(typst-ts-mode)
-                        :server-id 'typst-lsp)))
-
-
-(package! org-modern)
-(package! org-auto-tangle)
-(package! ox-typst
-  :recipe (:host github :repo "jmpunkt/ox-typst"))
-(package! ox-gfm)
-
-
-(package! org-typst-preview
-  :recipe (:host github :repo "remimimimimi/org-typst-preview.el"
-           :files ("org-typst-preview.el")))
-
-(package! move-text)
-(package! guess-language)
-(package! rg)
-(package! calfw)
-(package! calfw-gcal)
-
-;; if the package you are trying to install does not contain a PACKAGENAME.el
+;; If the package you are trying to install does not contain a PACKAGENAME.el
 ;; file, or is located in a subdirectory of the repo, you'll need to specify
 ;; `:files' in the `:recipe':
 ;; (package! this-package
