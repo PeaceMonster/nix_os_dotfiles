@@ -32,7 +32,8 @@
     rclone
     peaclock
     percollate # Tool for turning webpages into pdms
-	bitwarden-cli
+    bitwarden-cli
+    openhue-cli # Control philips hue from terminal
 
     # File manipulation
     ffmpeg
