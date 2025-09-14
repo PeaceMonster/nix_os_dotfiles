@@ -25,7 +25,7 @@
     vim
     git
     jujutsu
-    rofi-wayland
+    rofi
     tlrc
     git
     htop
