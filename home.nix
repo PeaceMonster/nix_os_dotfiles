@@ -41,6 +41,7 @@
       gimp
       inkscape
       prusa-slicer # 3D print
+      blender
 
       #Media
       mpv

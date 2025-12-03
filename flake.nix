@@ -78,7 +78,7 @@
           inherit inputs;
         };
         modules = [
-          inputs.nixvim.homeManagerModules.nixvim
+          inputs.nixvim.homeModules.nixvim
           stylix.homeManagerModules.stylix
           ./home.nix
         ];
@@ -92,7 +92,7 @@
           };
         };
         modules = [
-          inputs.nixvim.homeManagerModules.nixvim
+          inputs.nixvim.homeModules.nixvim
           stylix.homeManagerModules.stylix
           ./station/home.nix
         ];

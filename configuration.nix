@@ -15,6 +15,7 @@
     qtile.enable = true;
     niri.enable = true;
     plasma.enable = true;
+    mango.enable = true;
   };
   # Bootloader.
   boot.loader = {
@@ -159,6 +160,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    clang
     vim
     wget
     git
@@ -172,12 +174,13 @@
     kdePackages.partitionmanager
     openssl
     wine64
-	polkit_gnome
-	openrazer-daemon
-	polychromatic
+    polkit_gnome
+    openrazer-daemon
+    polychromatic
+    distrobox
   ];
 
-  services.dbus.packages = [ pkgs.libsForQt5.kpmcore ];
+  services.dbus.packages = [ pkgs.kdePackages.kpmcore ];
 
   programs.bash = {
     interactiveShellInit = ''
@@ -188,6 +191,17 @@
       fi
     '';
   };
+
+
+  xdg.mime.defaultApplications = {
+    "text/html" = "org.qutebrowser.qutebrowser.desktop";
+    "x-scheme-handler/http" = "org.qutebrowser.qutebrowser.desktop";
+    "x-scheme-handler/https" = "org.qutebrowser.qutebrowser.desktop";
+    "x-scheme-handler/about" = "org.qutebrowser.qutebrowser.desktop";
+    "x-scheme-handler/unknown" = "org.qutebrowser.qutebrowser.desktop";
+  };
+
+  xdg.mime.enable = true;
 
   services.syncthing = {
     enable = true;
@@ -204,6 +218,7 @@
     libraries = with pkgs; [
       pkg-config
       openssl
+      clang
     ];
   };
   # Some programs need SUID wrappers, can be configured further or are

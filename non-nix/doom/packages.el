@@ -17,12 +17,20 @@
 
 (package! typst-ts-mode
   :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
+(package! outline-indent-mode
+  :recipe (:host nil :repo "https://git.sr.ht/~meow_king/outline-indent-mode"))
 
 (package! gleam-ts-mode
   :recipe (:host github
            :repo "gleam-lang/gleam-mode"
            :branch "main"
            :files ("gleam-ts-*.el")))
+
+(package! ox-typst)
+
+;;
+;;
+;;
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/radian-software/straight.el#the-recipe-format

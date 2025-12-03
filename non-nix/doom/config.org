@@ -46,7 +46,9 @@ available. You can either set `doom-theme' or manually load a theme with the
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
 (after! typst-ts-mode
   (add-hook 'typst-ts-mode-hook #'lsp)
-  (add-hook 'typst-ts-mode-hook #'adaptive-wrap-prefix-mode))
+  (add-hook 'typst-ts-mode-hook #'adaptive-wrap-prefix-mode)
+  )
+
 (after! lsp-mode
   (add-to-list 'lsp-language-id-configuration '(typst-ts-mode . "typst"))
   (lsp-register-client (make-lsp-client
@@ -56,11 +58,13 @@ available. You can either set `doom-theme' or manually load a theme with the
 #+end_src
 
 
-** Ocaml
-
 #+begin_src elisp
-
+(setq org-typst-from-latex-environment #'org-typst-from-latex-with-naive
+      org-typst-from-latex-fragment #'org-typst-from-latex-with-naive)
+(after! org
+  (require 'ox-typst))
 #+end_src
+
 
 
 ** Gleam-Mode
@@ -76,4 +80,10 @@ available. You can either set `doom-theme' or manually load a theme with the
 (after! gleam-ts-mode
   (unless (treesit-language-available-p 'gleam)
     (gleam-ts-install-grammar)))
+#+end_src
+
+
+** Evil-Snipe
+#+begin_src elisp
+(setq evil-snipe-scope 'visible)
 #+end_src

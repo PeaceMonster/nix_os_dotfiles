@@ -84,6 +84,7 @@
     Space 0
     p ,
     Quote .
+    r Minus
     caps @wnormal
 )
 (deflayermap (fnpad)

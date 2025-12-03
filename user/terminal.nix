@@ -56,7 +56,7 @@
     miniserve # Serve files
     comma # Temp programs
 
-    poppler_utils
+    poppler-utils
 
     gnumake42
     cmake
@@ -91,8 +91,8 @@
   };
   programs.git = {
     enable = true;
-    userName = "Mikkel Ugilt";
-    userEmail = "ugilt3@gmail.com";
+    settings.user.name = "Mikkel Ugilt";
+    settings.user.email = "ugilt3@gmail.com";
   };
 
   programs.zsh = {
