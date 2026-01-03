@@ -37,6 +37,16 @@
   security.polkit.enable = true;
 
 
+  # Weylus, a way to use ipad as graphics tablet
+  programs.weylus = {
+    enable = true;
+    openFirewall = true;
+    users = [
+      "ugilt"
+    ];
+  };
+
+
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
