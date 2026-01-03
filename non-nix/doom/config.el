@@ -1,6 +1,6 @@
-(setq doom-font (font-spec :family "Jetbrains Mono NerdFont" :size 40))
+(setq doom-font (font-spec :family "Jetbrains Mono NerdFont" :size 30))
 
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-gruvbox-light)
 
 (setq display-line-numbers-type 'visual)
 

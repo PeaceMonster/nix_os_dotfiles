@@ -1,15 +1,16 @@
 { pkgs, ... }:
 let
   # theme = "gruvbox-dark-medium";
-  theme = "da-one-sea";
+  # theme = "da-one-sea";
+  theme = "gruvbox-light-medium";
   base16 = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-  bg_image = ./images/da-one-sea.jpeg;
+  bg_image = ./images/gruvbox-light.png;
 in
 {
   stylix.enable = true;
 
   stylix.image = bg_image;
-  stylix.polarity = "dark";
+  stylix.polarity = "light";
 
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gigavolt.yaml";
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light-medium.yaml";
