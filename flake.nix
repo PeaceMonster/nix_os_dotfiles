@@ -22,95 +22,106 @@
 
     # Audiobook-dl
     audiobook-dl.url = "github:jo1gi/audiobook-dl";
+
+    # Mango Window manager
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {
-    nixpkgs,
-    nixpkgs-stable,
-    home-manager,
-    nix-index-database,
-    stylix,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    nixosConfigurations = {
-      ugilt = lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          pkgs-stable = import nixpkgs-stable {
-            inherit system;
-            config.allowUnfree = true;
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-stable,
+      home-manager,
+      nix-index-database,
+      stylix,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      lib = nixpkgs.lib;
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      nixosConfigurations = {
+        ugilt = lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            inherit inputs;
           };
-          inherit inputs;};
-        modules = [
-          ./configuration.nix
-          nix-index-database.nixosModules.nix-index
-        ];
+          modules = [
+            ./configuration.nix
+            inputs.mango.nixosModules.mango
+            nix-index-database.nixosModules.nix-index
+          ];
+        };
+        station = lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./station/configuration.nix
+            nix-index-database.nixosModules.nix-index
+          ];
+        };
+        beast = lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./beast/configuration.nix
+            nix-index-database.nixosModules.nix-index
+          ];
+        };
       };
-      station = lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./station/configuration.nix
-          nix-index-database.nixosModules.nix-index
-        ];
-      };
-      beast = lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./beast/configuration.nix
-          nix-index-database.nixosModules.nix-index
-        ];
+      homeConfigurations = {
+        ugilt = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            inherit inputs;
+          };
+          modules = [
+            inputs.nixvim.homeModules.nixvim
+            stylix.homeManagerModules.stylix
+            ./home.nix
+          ];
+        };
+        station = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+          modules = [
+            inputs.nixvim.homeModules.nixvim
+            stylix.homeManagerModules.stylix
+            ./station/home.nix
+          ];
+        };
+        beast = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+          modules = [
+            inputs.nixvim.homeManagerModules.nixvim
+            stylix.homeManagerModules.stylix
+            ./beast/home.nix
+          ];
+        };
       };
     };
-    homeConfigurations = {
-      ugilt = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          pkgs-stable = import nixpkgs-stable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          inherit inputs;
-        };
-        modules = [
-          inputs.nixvim.homeModules.nixvim
-          stylix.homeManagerModules.stylix
-          ./home.nix
-        ];
-      };
-      station = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          pkgs-stable = import nixpkgs-stable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-        };
-        modules = [
-          inputs.nixvim.homeModules.nixvim
-          stylix.homeManagerModules.stylix
-          ./station/home.nix
-        ];
-      };
-      beast = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          pkgs-stable = import nixpkgs-stable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-        };
-        modules = [
-          inputs.nixvim.homeManagerModules.nixvim
-          stylix.homeManagerModules.stylix
-          ./beast/home.nix
-        ];
-      };
-    };
-  };
 }
